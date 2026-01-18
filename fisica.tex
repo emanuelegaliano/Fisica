@@ -1,0 +1,164 @@
+\documentclass[a4paper,11pt]{book}
+
+% =====================================================
+% LANGUAGE AND ENCODING
+% =====================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+
+% =====================================================
+% TYPOGRAPHY 
+% =====================================================
+\usepackage{libertinus}          % main serif font + math
+\usepackage[scale=0.95]{sourcesanspro} % sans-serif for metadata
+
+\usepackage{microtype}
+\usepackage{xcolor}
+
+% -----------------------------------------------------
+% Color palette
+% -----------------------------------------------------
+\definecolor{Accent}{HTML}{0B3A3E}
+\definecolor{TextGray}{gray}{0.25}
+\definecolor{RuleGray}{gray}{0.75}
+
+% =====================================================
+% PAGE LAYOUT
+% =====================================================
+\usepackage{geometry}
+\geometry{a4paper, top=28mm, bottom=30mm, left=30mm, right=30mm}
+
+\usepackage{setspace}
+\setstretch{1.12}
+
+\clubpenalty=10000
+\widowpenalty=10000
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+
+% =====================================================
+% HEADERS AND FOOTERS
+% =====================================================
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\setlength{\headheight}{15pt}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% =====================================================
+% HYPERLINKS
+% =====================================================
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+
+% =====================================================
+% GRAPHICS
+% =====================================================
+\usepackage{graphicx}
+
+% =====================================================
+% TABLES
+% =====================================================
+\usepackage{booktabs}
+
+% =====================================================
+% MATHEMATICS
+% =====================================================
+\usepackage{amsmath,amssymb,amsthm}
+\numberwithin{equation}{chapter}
+
+% =====================================================
+% LISTS
+% =====================================================
+\usepackage{enumitem}
+\setlist[itemize]{topsep=4pt, itemsep=3pt}
+\setlist[enumerate]{topsep=4pt, itemsep=3pt}
+\setlist[description]{font=\normalfont\bfseries, labelsep=0.6em, leftmargin=2em}
+
+% =====================================================
+% DOCUMENT METADATA
+% =====================================================
+\newcommand{\BookTitle}{Fisica}
+\newcommand{\BookSubtitle}{Note di corso}
+\newcommand{\BookAuthor}{%
+Emanuele Galiano\\
+Andrea Leone\\
+Sofia Lo Vecchio%
+}
+\newcommand{\BookYear}{2025/2026}
+
+\begin{document}
+
+\frontmatter
+
+% =====================================================
+% TITLE PAGE
+% =====================================================
+\begin{titlepage}
+\thispagestyle{empty}
+
+% ---------- Title block (centered)
+\begin{center}
+\vspace*{18mm}
+
+{\fontsize{28}{34}\selectfont\bfseries\color{Accent} \BookTitle\par}
+
+\vspace{7mm}
+{\color{Accent}\rule{0.66\textwidth}{1.1pt}}
+
+\vspace{10mm}
+{\Large\sffamily\color{TextGray}\BookSubtitle\par}
+
+\end{center}
+
+\vfill
+
+% ---------- Authors (left) and year (right)
+{\sffamily\small\color{TextGray}
+\noindent
+\begin{minipage}[t]{0.7\textwidth}
+\raggedright
+\BookAuthor
+\end{minipage}%
+\begin{minipage}[t]{0.3\textwidth}
+\raggedleft
+\BookYear
+\end{minipage}
+}
+
+\vspace*{6mm}
+\end{titlepage}
+
+% =====================================================
+% FRONT MATTER
+% =====================================================
+\input{frontmatter/prefazione}
+\input{frontmatter/CC_BY-SA}
+
+% =====================================================
+% TABLE OF CONTENTS
+% =====================================================
+\tableofcontents
+\cleardoublepage
+
+% =====================================================
+% MAIN CONTENT
+% =====================================================
+\mainmatter
+\input{chapters/cinematica}
+\input{chapters/dinamica}
+\input{chapters/termodinamica}
+\input{chapters/onde}
+\input{chapters/meccanica_quantistica}
+
+% =====================================================
+% BACK MATTER
+% =====================================================
+\backmatter
+
+\end{document}
