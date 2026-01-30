@@ -1,2 +1,2189 @@
 \chapter{Termodinamica}
-[WIP]
+
+Il concetto di Termodinamica è stato introdotto nel XIX secolo, sotto la spinta di esigenze sulla comprensione dei fenomeni energetici posti dall’emergente società industriale, per costruire macchine più complesse ed efficienti.
+
+\section{Sistema termodinamico}
+
+\begin{quote}
+\emph{Un \textbf{sistema termodinamico} è una qualsiasi porzione di materia all’interno di un volume limitato all’interno di una superficie chiusa (non necessariamente materiale) attraverso la quale il sistema scambi eventualmente energia interagendo con altri sistemi, chiamati \textbf{ambiente} o serbatoi.}
+\end{quote}
+
+Questo sistema è quindi rappresentabile come una distribuzione continua di materia, la cui densità e le cui caratteristiche fisiche possono variare tra le parti del sistema.
+
+Si può definire lo \textbf{stato microscopico} di un sistema termodinamico quando sono note posizione, quantità di moto e il momento angolare di ognuna delle particelle che costituiscono il sistema. Lo stato ad ogni momento successivo verrebbe determinato risolvendo le equazioni del moto per ciascuna particella.
+
+Lo \textbf{stato macroscopico}, invece, viene definito dai valori di un certo numero di grandezze fisiche macroscopiche dette \textbf{variabili termodinamiche}, chiamate \emph{parametri di stato}.
+
+\subsection{Equilibrio di un sistema}
+
+Si dice che un \textbf{sistema termodinamico è in equilibrio} se i parametri di stato che lo descrivono non variano nel tempo. Da questo si ottiene che il \textbf{sistema termodinamico} è in uno stato di equilibrio.
+
+\subsection{Variabili termodinamiche}
+
+Le variabili termodinamiche, ossia le grandezze fisiche macroscopiche che possono essere misurate nel sistema, sono in generale tra loro dipendenti. \textbf{Le relazioni che legano due o più variabili termodinamiche sono chiamate relazioni di stato.}
+
+\section{Temperatura empirica}
+
+Lo strumento utilizzato per \textbf{misurare} la temperatura si chiama \textbf{termometro}, ed è uno strumento che misura la sensazione di “caldo” e “freddo”. Per rendere quantitativa questa misura, è necessario costruire dei termometri che, a contatto con dei corpi \textbf{più} caldi o freddi, alterino significativamente e in maniera riproducibile una loro proprietà fisica misurabile chiamata \textbf{grandezza termometrica}. Il valore $X$ assunto da tale grandezza, detto \textbf{variabile termometrica}, viene preso a misura dalla temperatura del corpo con il quale il termometro è in contatto.
+
+La temperatura così definita, viene chiamata \textbf{temperatura empirica}, si può definire più formalmente come
+
+\begin{quote}
+\emph{La grandezza misurata da un termometro con il quale il sistema di cui si vuole determinare la temperatura entra in contatto.}
+\end{quote}
+
+Un modo di fare questo è utilizzare il \textbf{mercurio}: un liquido che si espande o si contrae a seconda dello stato termico del corpo con cui è messo a contatto e questo crea un \textbf{indicatore di stato termico}.
+
+\subsection{Scala termometrica}
+
+Uno dei problemi che rimane da risolvere è \textbf{definire} la scala termometrica da adottare. Nel sistema internazionale, la scala utilizzata si basa su un unico \textbf{punto fisso}: la temperatura dell’acqua nel suo stato termodinamico di \textbf{punto triplo} (ovvero lo stato dove coesistono tutti e 3 gli stati della materia) per un punto generico termometro caratterizzato dalla variabile termometrica $X$, la sua temperatura empirica è definita dalla relazione:
+
+\[
+\theta(X) = \theta_0 \frac{X}{X_0}
+\]
+
+Dove $X_0$ è il valore della variabile termometrica nello stato di riferimento del termometro in cui esso è a contatto termico con l’acqua al punto triplo. A tale stato è assegnato convenzionalmente il valore di temperatura $\theta_0$ (ovviamente, arbitrario). Il valore convenzionalmente scelto è $\theta_0 = 273.16$ da cui l’unità di misura della temperatura è il \textbf{Kelvin}.
+
+\subsection{Scale termometriche comuni}
+
+Le scale termometriche più comuni sono 3: Celsius, Kelvin e Fahrenheit.
+
+\subsubsection*{Celsius}
+
+La \textbf{scala Celsius} è quella più utilizzata nella vita quotidiana. È nata facendo riferimento al comportamento dell’acqua a pressione atmosferica: allo stato di fusione del ghiaccio è assegnata la temperatura di \textbf{0 °C}, mentre allo stato di ebollizione dell’acqua viene assegnata la temperatura di \textbf{100 °C}. Oggi, dal punto di vista scientifico, la scala Celsius non viene più definita direttamente tramite questi due punti, ma è ricavata a partire dalla scala Kelvin. In particolare, la temperatura in gradi Celsius si ottiene sottraendo \textbf{273,15} al valore della temperatura espresso in Kelvin.
+
+\subsubsection*{Kelvin}
+
+La \textbf{scala Kelvin} è la scala fondamentale della termodinamica ed è detta \textbf{scala assoluta}. Il suo zero corrisponde allo \textbf{zero assoluto}, cioè alla temperatura minima teoricamente raggiungibile da un sistema fisico. La scala Kelvin utilizza come riferimento il \textbf{punto triplo dell’acqua}, al quale viene assegnato il valore di \textbf{273,16 K}. Il legame con la scala Celsius è molto semplice: la temperatura in Kelvin si ottiene sommando \textbf{273,15} al valore in gradi Celsius. Per questo motivo un intervallo di \textbf{1 K} ha la stessa ampiezza di \textbf{1 °C}; cambia solo l’origine della scala.
+
+\subsubsection*{Fahrenheit}
+
+La \textbf{scala Fahrenheit} è usata principalmente negli Stati Uniti ed è meno comune in ambito scientifico. Anche in questo caso la scala è costruita in modo convenzionale, ma sia lo zero sia l’ampiezza dell’unità di misura sono diversi rispetto alla Celsius. Il legame tra le due scale è lineare: la temperatura in gradi Fahrenheit si ottiene moltiplicando la temperatura in gradi Celsius per \textbf{9/5} e aggiungendo \textbf{32}. Di conseguenza, \textbf{0 °C} corrisponde a \textbf{32 °F} e \textbf{100 °C} corrisponde a \textbf{212 °F}.
+
+\section{Gas ideale (o perfetto)}
+
+\begin{quote}
+Un gas si dice \textbf{ideale} se costituito da molecole non interagenti tra loro, considerate come punti materiali privi di struttura interna e che occupano un volume detto \emph{proprio del gas}, trascurabile rispetto al volume totale occupato dal gas.
+\end{quote}
+
+Un gas reale, approssima tanto la sua condizione di gas ideale quando la sua densità (e quindi la sua pressione) è più bassa e quanto è più alta la temperatura.
+
+Grazie all’esperimento su un termometro a gas schematizzato, si conosce il valore empirico della pressione:
+
+\[
+\theta(p) \equiv \theta_0 \frac{p}{p_{tr}}
+\]
+
+Dove $p_{tr}$ è la quantità di gas originariamente inserito nell’ampolla. Su diverse misure, si ottiene una relazione quasi lineare tra temperatura e il valore di $p_{tr}$.
+
+Per il limite $p_{tr} \rightarrow 0$ gli andamenti su diversi gas convergono ad un unico valore, il che spiega che tutti i gas si comportano come gas ideali se sufficientemente rarefatti. Si definisce allora la \textbf{scala di temperatura del termometro a gas ideale} indicata con il simbolo $T$:
+
+\[
+T(p) \equiv \lim_{p_{tr} \rightarrow 0} \left( \theta_0 \frac{p}{p_{tr}} \right)
+\]
+
+Questa scala viene chiamata anche \textbf{scala termodinamica della temperatura assoluta}.
+
+\section{Calore}
+
+\begin{quote}
+Il calore si definisce come \textbf{l’energia} che si trasferisce tra due sistemi a causa di una differenza di temperatura.
+\end{quote}
+
+Il calore scambiato può essere misurato con un calorimetro a ghiaccio: ipotizziamo acqua e ghiaccio in equilibrio per $T= 0$ e $p=1 \text{ atm}$. Un corpo caldo a contatto con lo strumento causa lo scioglimento di una certa quantità di ghiaccio.
+
+Da qui si definisce la \textbf{caloria}: il calore che va fornito ad un grammo di acqua per aumentare la sua temperatura da 14.5 a 15.5 gradi Celsius, con segno positivo se questo è assorbito da un sistema, negativo altrimenti.
+
+Se due corpi hanno temperature diverse, l’energia passa spontaneamente da quello a temperatura maggiore a quello a temperatura minore finché si raggiunge l’equilibrio termico.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/image.png}
+\end{figure}
+
+Dopo un certo tempo, i due sistemi raggiungeranno la stessa temperatura $T$, \textbf{chiamata temperatura di equilibrio.}
+
+\subsection{Principio Zero}
+
+\begin{quote}
+Il \textbf{principio zero} della termodinamica dice che, se due corpi $A$ e $B$ sono, rispettivamente, in equilibrio termico con un terzo corpo $C$, allora $A$  e $B$ sono in equilibrio termico tra loro.
+\end{quote}
+
+\subsection{Sistema termodinamico}
+
+Un sistema macroscopico, descritto in termini di parametri di stato, può essere definito come:
+
+\begin{enumerate}
+	\item \textbf{Sistema aperto}: un sistema che scambia sia \textbf{materia} che \textbf{energia} con l’ambiente. Un esempio è la pentola senza coperchio con acqua che bolle.
+	\item \textbf{Sistema chiuso}: un sistema che scambia solo \textbf{energia} con l’ambiente. Un esempio è una bottiglia d’acqua chiusa.
+	\item \textbf{Sistema isolato}: non scambia né energia, né materia con l’ambiente. Un esempio è un \emph{thermos ideale}.
+\end{enumerate}
+
+\subsection{Equilibrio termodinamico}
+
+Un sistema si definisce in \textbf{equilibrio termodinamico}, quando i parametri di stato assumono lo stesso valore in ogni punto del sistema. Quindi non hanno la tendenza spontanea a cambiare.
+
+Questo implica che il sistema è contemporaneamente in:
+
+\begin{itemize}
+	\item \textbf{Equilibrio termico}: temperatura uniforme e nessun flusso di calore interno.
+	\item \textbf{Equilibrio meccanico}: pressione bilanciata e nessun moto macroscopico.
+	\item \textbf{Equilibrio chimico}: composizione stabile e nessuna reazione netta di specie.
+\end{itemize}
+
+\section{Trasformazioni termodinamiche}
+
+Quando un sistema termodinamico cambia il suo stato, passando da uno stato di equilibrio iniziale ad uno stato di equilibrio finale, si dice che ha compiuto una \textbf{trasformazione termodinamica}.
+
+Uno stato termodinamico di equilibrio è rappresentato da un punto nello spazio a $N$ dimensioni (il numero di parametri di stato indipendenti necessari a descrivere lo stato del sistema) detto \textbf{spazio dei parametri termodinamici}. Se consideriamo un gas, il cui stato termodinamico è descritto univocamente dal valore della sua pressione e del suo volume, lo spazio dei parametri è un piano dove l’ascissa riporta il volume occupato del gas e l’ordinata la sua pressione.
+
+\subsection{Trasformazione quasi-statica}
+
+Una trasformazione si dice \textbf{quasi-statica} quando passa solo attraverso stati di equilibrio termodinamico.
+
+\emph{Esempio: la compressione lenta di un gas in un cilindro con pistone.}
+
+\subsection{Trasformazione reversibile}
+
+Una trasformazione si dice \textbf{reversibile} se è possibile passare dallo stato finale allo stato iniziale, ripercorrendo gli stessi stati intermedi impiegati durante la trasformazione iniziale.
+
+\emph{Una trasformazione che non sia reversibile è detta irreversibile}.
+
+\subsection{Trasformazione irreversibile}
+
+Una trasformazione si dice \textbf{irreversibile} se avviene per successione di stati di equilibrio, ovvero i parametri di stato possono variare \emph{significativamente} da punto a punto all’interno del sistema in evoluzione.
+
+In genere una trasformazione è irreversibile se:
+
+\begin{itemize}
+	\item Avvengono fenomeni dissipativi, (dell’energia impiegata in un cambio di stato non può essere riutilizzata per la trasformazione inversa)
+	\item La trasformazione non è quasi-statica
+\end{itemize}
+
+\subsection{Trasformazione ciclica}
+
+Una trasformazione si dice \textbf{ciclica} se lo stato termodinamico iniziale e quello finale \textbf{coincidono}. Questo significa che, il sistema dopo aver scambiato energia con l’ambiente si riporta nello stato iniziale.
+
+Da qui deriva che il sistema costituisce una \textbf{macchina ciclica}.
+
+\subsection{Trasformazione spontanea}
+
+Una trasformazione si dice \textbf{spontanea} quando, facendo parte di un sistema \emph{isolato}, si passa da uno stato di non-equilibrio ad uno stato di equilibrio termodinamico.
+
+\subsection{Variabili}
+
+Nelle trasformazioni esistono diverse tipologie di variabili che influiscono sui cambiamenti. Si dividono in:
+
+\begin{itemize}
+	\item \textbf{Intensive}: quelle variabili che non dipendono dall’estensione del sistema, come pressione, temperatura e densità.
+	\item \textbf{Estensive}: quelle variabili che dipendono dall’estensione del sistema, come ad esempio massa, volume e numero di moli.
+\end{itemize}
+
+\section{Trasformazioni del gas ideale}
+
+Un gas ideale può essere osservato tramite gas rarefatti (come detto prima), poiché lo approssimano bene. Grazie a questa assunzione, si possono studiare le trasformazioni di un gas quando uno dei parametri termodinamici è costante.
+
+\subsection{Temperatura costante}
+
+Una trasformazione a temperatura costante, ossia \textbf{isoterma}, si può definire secondo la legge
+
+\[
+pV = p_0V_0
+\]
+
+ovvero, la pressione del gas è inversamente proporzionale al volume da esso occupato
+
+\[
+p(V) = \frac{p_0V_0}{V}
+\]
+
+essendo rispettivamente $p_0, V_0$ la pressione e il volume del gas nello stato iniziale.
+
+\subsection{Pressione costante}
+
+Una trasformazione a pressione costante, ossia \textbf{isobara}, si può definire secondo la legge
+
+\[
+V(t) = V_0(1 + \alpha t)
+\]
+
+dove $V_0$ è il volume del gas alla temperatura di fusione dell’acqua, $\alpha$ è una costante detta “Coefficiente di dilatazione termica” che vale $1/273.15 \ \text{C}^\circ$.
+
+\emph{NB: $t$ indica la temperatura in gradi Celsius.}
+
+Questo significa che la variazione relativa del volume del gas per ogni grado centigrado di variazione di temperatura è:
+
+\[
+\frac{1}{V_0}\frac{dV}{dt} = \alpha
+\]
+
+ossia, per ogni grado di aumento della temperatura del gas, il suo volume si dilata di una quantità pari a $1/273.15$ volte il volume iniziale.
+
+Dalla formula si può osservare che, per $t = -273.15 \ \text{C}^\circ
+ \Rightarrow T = 0 \ \text{K}$, anche detta temperatura di \textbf{zero assoluto}, il volume del gas ideale si annullerebbe. Questa estrapolazione non è lecita per nessun gas reale, anche molto rarefatto, perché:
+
+\begin{enumerate}
+	\item In primo luogo perché esiste un volume proprio delle molecole, che ad un certo punto non può essere più trascurato (effetto microscopico).
+	\item In un secondo luogo perché le molecole, anche se debolmente, interagiscono e per una temperatura abbastanza bassa il gas diventa \emph{liquido} (es. Elio diventa liquido a $4.1 \ \text{K}$)
+\end{enumerate}
+
+Se utilizzassimo la temperatura in Kelvin, invertendo la relazione $t: T - 1/\alpha$, otterremmo la legge in termini di temperatura assoluta:
+
+
+\begin{align*}
+V &= V_0 \alpha T = \frac{V_0}{273.15} \\
+T &= \frac{V_0}{T_0}T
+\end{align*}
+
+
+\subsection{Volume costante}
+
+Una trasformazione a volume costante, ovvero \textbf{isocora}, si può definire tramite la legge:
+
+\[
+p(t) = p_0(1 + \beta t)
+\]
+
+dove $p_0$ è la pressione del gas alla temperatura di riferimento $t_0$. La pressione cresce quindi linearmente con la temperatura e risulta, sperimentalmente, che il coefficiente di variazione della pressione $\beta$ è uguale al coefficiente di dilatazione termica
+
+\[
+\beta = \frac{1}{p_0}\frac{dp}{dt} = \alpha
+\]
+
+\subsection{Equazione di stato dei gas perfetti}
+
+Uno dei casi da studiare è come variano pressione, temperatura e volume di un gas ideale per una trasformazione generica:
+
+\[
+\frac{pV}{T} =
+\frac{p_0V_0}{T_0}
+\]
+
+che esprime che per una qualsiasi trasformazione di un gas ideale, il prodotto della sua pressione per il volume diviso il valore della sua temperatura assoluta è costante.
+
+L’equazione di stato si ottiene dall’insieme delle 3 leggi, considerando lo stato iniziale $(p_0, V_0, T_0)$ di un gas ed un generico stato finale $(p, V, T)$ rappresentabili in un piano dai punti $A$ e $B$. Consideriamo uno stato intermedio $C$ che abbia la stessa temperatura iniziale $T_0$ e la pressione $p_c$ uguale alla pressione finale $p$. Per la legge di Boyle, ovvero sulle trasformazioni a temperatura costante:
+
+\[
+p_cV_c = pV_C = p_0V_0
+\]
+
+Dopo questa trasformazione, si considera la trasformazione isobara (legge di Boyle) che porta dallo stato $C$ allo stato finale $B$ e, per la legge di Gay-Lussac, si ha
+
+\[
+V = \frac{V_c}{T_C}T \Leftrightarrow V_c = \frac{VT_C}{T} = \frac{VT_0}{T}
+\]
+
+(ricordando che $T_c \equiv T_0$).
+
+Inserendo questa nell’equazione per le trasformazioni a temperatura costante di prima otteniamo
+
+\[
+\frac{pVT_0}{T} = p_0V_0
+\]
+
+Che è identica all’equazione di stato di un gas generico.
+
+Sperimentalmente, se si considera una mole di gas ideale alla temperatura $T_0 = 273.15 \text{ K}$ e alla pressione atmosferica $p_0 = 1,013 \cdot 10^5 \text{ Pa}$, si osserva che il volume occupato dal gas, detto \textbf{volume molare}, in queste condizioni (chiamate condizioni standard) vale $22.4 \cdot 10^{-3} \text{ m}^3$. Da qui si ricava la \textbf{costante universale del gas ideale}:
+
+\[
+R \equiv \frac{p_0V_0}{T_0} = 8.314 \ \frac{\text{J}}{\text{K}\cdot \text{mole}}
+\]
+
+E utilizzando questa costante, si può scrivere l’equazione di stato per una mole di gas ideale come
+
+\[
+pV = RT
+\]
+
+Per un gas contenente un generico numero $n$ di moli, il volume occupato dal gas, nelle stesse condizioni di temperatura e pressione, è ovviamente $n$ volte il numero molare, ossia
+
+\[
+pV = nRT
+\]
+
+Questa relazione esprime \textbf{l’equazione di stato per $n$ moli di un gas ideale}.
+
+\subsection{Energia cinetica}
+
+Altre misure che possono essere fatte sono il numero totale di atomi nel recipiente:
+
+\[
+N_{\text{tot}} = n \cdot N_A
+\]
+
+dove $N_A$ è il numero di Avogadro $6.022 \cdot 10^{23}$. Da qui, si può calcolare l’energia cinetica totale del gas come
+
+\[
+K_{\text{tot}} = \sum_{i=1}^{nN_A} \frac{mv_i^2}{2}
+\]
+
+Si può dimostrare che vale la relazione
+
+\[
+PV = \frac{2}{3}K_{\text{tot}}
+\]
+
+e, osservando che l’energia cinetica media è data da
+
+\[
+\left< K\right> = \frac{1}{N_{\text{tot}}} \sum_{i=1}^{N_{\text{tot}}} \frac{mv_i^2}{2} = \frac{1}{nN_A} \sum_{i=1}^{nN_A} \frac{mv_i^2}{2} = \frac{K_\text{tot}}{nN_A}
+\]
+
+si ottiene
+
+\[
+PV = \frac{2}{3}nN_A \left< K \right>
+\]
+
+Da questo risultato e dall’equazione di stato dei gas perfetti $PV = nRT$, si vede che entrambe le espressioni descrivono la stessa grandezza $PV$. Si possono mettere a confronto
+
+\[
+nRT = \frac{2}{3}nN_A \left< K \right>
+\]
+
+e semplificando il numero di moli $n$ si ottiene la \textbf{temperatura in funzione dell’energia cinetica media}
+
+\[
+T = \frac{2}{3R} N_A \left< K \right>
+\]
+
+Si introduce la \textbf{costante di Boltzmann} definita come
+
+\[
+k_B = \frac{R}{N_A} \approx 1.38
+ \cdot 10^{-23} \text{ J/K}
+\]
+
+Utilizzando questa definizione, la relazione precedente può essere riscritta come
+
+\[
+\left< K \right > = \frac{3}{2} k_BT \Rightarrow
+T = \frac{2}{3k_B} \left< K \right>
+\]
+
+Questa relazione mostra che \textbf{la temperatura di un gas è una misura diretta dell’energia cinetica media delle particelle che lo compongono}.
+
+\subsection{Da forma differenziale a forma finita}
+
+Se $c$ o $C$ possono essere considerate costanti, integrando tra una temperatura iniziale $T_1$ e una finale $T_2$ si ottiene
+
+\[
+\int_{T_1}^{T_2} \delta Q = \int_{T_1}^{T_2} mc(T)dT = mc(T_2-T_1)
+\]
+
+\[
+\int_{T_1}^{T_2} \delta Q = \int_{T_1}^{T_2} nC(T)dT = nC(T_2-T_1)
+\]
+
+\subsection{Equilibrio termico tra due solidi}
+
+Considerando due solidi a temperatura iniziali diverse $T_1 > T_2$, messi a contatto in un \textbf{sistema isolato}, quindi
+
+\[
+Q_1 + Q_2 = 0
+\]
+
+Da qui, si riscrivono i calori dei due solidi
+
+\[
+Q_1 = m_1c_1(T_{eq}-T_1), \qquad
+Q_2 = m_2c_2(T_{eq}-T_2)
+\]
+
+e, imponendo la conservazione dell’energia, si ottiene la temperatura di equilibrio
+
+\[
+T_{eq} = \frac{m_1c_1T_1 + m_2c_2T_2}{m_1c_1+m_2c_2}
+\]
+
+che equivale a una \textbf{media pesata}.
+
+\subsubsection*{Casi limite}
+
+Ci sono due casi limite:
+
+\begin{enumerate}
+	\item Se uno dei due sistemi ha una capacità termica molto maggiore dell’altro $m_1c_1 \gg m_2c_2$ allora la temperatura di equilibrio rimarrà invariata rispetto al sistema 1: $T_{eq} \approx T_1$.
+	\item Se i due sistemi hanno una capacità termica uguale, ovvero $m_1c_1 = m_2c_2$, allora la temperatura di equilibrio si può semplificare come
+	\[
+	T_{eq} = \frac{m_1c_1T_1 + m_1c_1T_2}{2m_1c_2} = \frac{m_1c_1(T_1 + T_2)}{2m_1c_2} = \frac{T_1 + T_2}{2}
+	\]
+\end{enumerate}
+
+\subsection{Approfondimento: legame tra energia cinetica e temperatura}
+
+Consideriamo un gas ideale contenuto in un recipiente di volume $V$. Le molecole del gas si muovono in modo casuale e caotico, urtandosi tra loro e contro le pareti del recipiente. Questi urti sono considerati perfettamente elastici, cioè non comportano perdita di energia cinetica.
+
+Si considera una parete piana del recipiente e un suo piccolo elemento di area $\Delta S$. Si sceglie l’asse $x$ \textbf{perpendicolare} alla parete. Una molecola di massa $m$ con velocità $\vec{v}$ ha una componente normale $v_x$ che, se urta la parete in modo elastico, inverte il verso:
+
+\[
+v_x \rightarrow -v_x
+\]
+
+Da qui, la quantità di moto cambia di:
+
+\[
+\Delta p_x = (-mv_x) - (mv_x) = -2mv_x
+\]
+
+quindi ogni urto trasferisce alla parete un impulso pari a $2mv_x$ (in modulo).
+
+Definiamo $N(\vec{v})$ come il numero di molecole in un volume $V$ che hanno intensità e direzione corrispondenti alla velocità $\vec{v}$. La densità numerica corrispondente è:
+
+\[
+n(\vec{v}) = \frac{N(\vec{v})}{V}.
+\]
+
+In un tempo $dt$, arrivano alla parete solo le molecole che si trovano nello ``strato'' di spessore $v_xdt$ davanti a $\Delta S$, cioè nel parallelepipedo di volume:
+
+\[
+\Delta S\, v_x dt.
+\]
+
+All’interno di questo volume ci sono:
+
+\[
+n(\vec{v}) \,\Delta S\, v_x dt
+\]
+
+molecole di quel gruppo. Non tutte però hanno $v_x$ diretto verso la parete: in assenza di direzioni privilegiate, per simmetria statistica solo il $50\%$ ha $v_x>0$. Quindi il numero di urti del gruppo $\vec{v}$ nel tempo $dt$ è:
+
+\[
+\frac{1}{2}\, n(\vec{v})\, v_x dt \,\Delta S.
+\]
+
+Poiché ogni urto fornisce un impulso $2mv_x$, l’impulso totale trasferito alla parete dal gruppo $\vec{v}$ in tempo $dt$ è:
+
+\[
+\left(\frac{1}{2} n(\vec{v}) v_x dt \right)\Delta S\,(2mv_x)
+= m n(\vec{v}) v_x^2 \,\Delta S\, dt.
+\]
+
+Dalla definizione di forza media:
+
+\[
+F = \frac{\Delta p}{dt} = m n(\vec{v}) v_x^2 \,\Delta S.
+\]
+
+La pressione associata a quel gruppo è quindi:
+
+\[
+p(\vec{v}) = \frac{F}{\Delta S} = m n(\vec{v}) v_x^2.
+\]
+
+Sommando su tutti i gruppi di velocità si ottiene:
+
+\[
+p = m \sum_{\vec{v}} n(\vec{v}) v_x^2.
+\]
+
+Definiamo ora la media pesata (sul numero di molecole) di $v_x^2$:
+
+\[
+\overline{v_x^2} = \frac{\sum_{\vec{v}} n(\vec{v}) v_x^2}{n},
+\qquad
+n = \sum_{\vec{v}} n(\vec{v}).
+\]
+
+Allora l’espressione della pressione diventa:
+
+\[
+p = mn\,\overline{v_x^2}.
+\]
+
+Poiché il moto è casuale e isotropo, le tre componenti hanno la stessa media quadratica:
+
+\[
+\overline{v_x^2} = \overline{v_y^2} = \overline{v_z^2}.
+\]
+
+Inoltre:
+
+\[
+v^2 = v_x^2 + v_y^2 + v_z^2
+\Rightarrow
+\overline{v^2} = \overline{v_x^2} + \overline{v_y^2} + \overline{v_z^2}
+= 3\overline{v_x^2},
+\]
+
+da cui:
+
+\[
+\overline{v_x^2} = \frac{\overline{v^2}}{3}.
+\]
+
+Sostituendo nella pressione:
+
+\[
+p = mn \frac{\overline{v^2}}{3}
+\Rightarrow
+p = \frac{1}{3}nm\overline{v^2}
+= \frac{2}{3}n\left(\frac{1}{2}m\overline{v^2}\right).
+\]
+
+Compare così l’energia cinetica media per molecola:
+
+\[
+\langle E_c \rangle = \frac{1}{2}m\overline{v^2},
+\]
+
+quindi:
+
+\[
+p = \frac{2}{3}n\langle E_c \rangle.
+\]
+
+Per un gas perfetto vale l’equazione di stato:
+
+\[
+pV = NkT,
+\]
+
+dove $N$ è il numero di molecole e $k$ è la costante di Boltzmann. Dividendo per $V$:
+
+\[
+p = \frac{N}{V}kT = nkT.
+\]
+
+Confrontando con la relazione cinetica:
+
+\[
+p = \frac{2}{3}n\langle E_c \rangle,
+\]
+
+si ottiene:
+
+\[
+nkT = \frac{2}{3}n\langle E_c \rangle.
+\]
+
+Per $n \neq 0$:
+
+\[
+kT = \frac{2}{3}\langle E_c \rangle
+\Rightarrow
+\langle E_c \rangle = \frac{3}{2}kT.
+\]
+
+Quindi:
+
+\[
+\boxed{\frac{1}{2}m\overline{v^2} = \frac{3}{2}kT.}
+\]
+
+\subsubsection*{Variante con distribuzione di Boltzmann}
+
+Si può utilizzare la distribuzione di Boltzmann, secondo cui la probabilità di trovare una molecola con energia $E$ è proporzionale a:
+
+\[
+e^{-E/kT}.
+\]
+
+Da qui la densità di probabilità nello spazio delle velocità è:
+
+\[
+f(\vec{v}) = A \exp\!\left(-\frac{m(v_x^2+v_y^2+v_z^2)}{2kT}\right),
+\]
+
+dove $A$ è una costante di normalizzazione. La distribuzione fattorizza come:
+
+\[
+f(\vec{v}) = f_x(v_x)\,f_y(v_y)\,f_z(v_z),
+\]
+
+con:
+
+\[
+f_x(v_x)=\sqrt{\frac{m}{2\pi kT}}
+\exp\!\left(-\frac{mv_x^2}{2kT}\right).
+\]
+
+Calcoliamo la media quadratica di una componente:
+
+\[
+\langle v_x^2\rangle
+=
+\int_{-\infty}^{+\infty} v_x^2 f_x(v_x)\,dv_x
+= \frac{kT}{m},
+\]
+
+poiché si tratta di un integrale gaussiano. Sommando sulle tre componenti:
+
+\[
+\langle v^2\rangle
+= \langle v_x^2+v_y^2+v_z^2\rangle
+= 3\langle v_x^2\rangle
+= \frac{3kT}{m}.
+\]
+
+Allora:
+
+\[
+\langle E_c\rangle
+= \frac{1}{2}m\langle v^2\rangle
+= \frac{3}{2}kT.
+\]
+
+\section{Lavoro in una trasformazione termodinamica}
+
+In una trasformazione \textbf{quasi-statica}, il sistema è sempre in equilibrio meccanico. Se il volume cambia di una quantità infinitesima $dV$, il lavoro elementare di espansione è:
+
+\[
+\delta L = PdV
+\]
+
+E si definisce di segno positivo se al lavoro compiuto dal sistema c’è un aumento di volume, negativo altrimenti (convenzione).
+
+In generale, il lavoro fatto (o subito) dal sistema è la somma dei lavori infinitesimi dovuti agli spostamenti di tutte le superfici infinitesime che compongono la superficie $S$ che delimita il volume del sistema, e, per un dato elemento infinitesimo di superficie, di tutti gli spostamenti infinitesimi dell’elemento considerato.
+
+Si può quindi definire formalmente il lavoro in una trasformazione termodinamica finita (che ha uno stato iniziale e uno finale) come
+
+\[
+L = \int_{V_i}^{V_f} p_edV
+\]
+
+Sappiamo anche che il lavoro può essere espresso come
+
+\[
+\delta L = F dh = (PS) dh
+\]
+
+ovvero il lavoro è uguale alla pressione per la superficie per lo spostamento infinitesimale.
+
+Lo spostamento infinitesimo $dh$ della superficie mobile comporta una variazione infinitesima di volume pari a
+
+\[
+dV = Sdh
+\]
+
+Sostituendo questa relazione nell’espressione del lavoro elementare, si ottiene
+
+\[
+\delta L = \int_S PdSdh = P \int_S dSdsh = PdV
+\]
+
+Questa formula vale per una trasformazione quasi statica che comporti una variazione di volume e viene chiamato \textbf{lavoro di espansione}.
+
+\subsection{Lavoro elementare vs finito}
+
+Esiste una distinzione tra il lavoro elementare, ovvero infinitesimo
+
+\[
+\delta L = PdV
+\]
+
+e quello finito tra due punti $A, B$
+
+\[
+L_{AB} = \int_A^B PdV
+\]
+
+\subsection{Lavoro dipendente dal percorso}
+
+Il lavoro è dipendente dal percorso, nel senso che
+
+\[
+L_{AB}^{(1)} \neq L_{AB}^{(2)}
+\]
+
+\emph{cioè, il lavoro da $A$ a $B$ è diverso seguendo il percorso 1 oppure il percorso 2.}
+
+Il lavoro di espansione si definisce come
+
+\[
+L_{AB} = \int_A^B PdV
+\]
+
+Questo valore nell’integrale dipende da \textbf{come cambia $P$ mentre cambia $V$}, cioè da quale curva si sta seguendo nello spazio dei parametri $P-V$:
+
+\begin{itemize}
+	\item Se durante l’espansione la pressione è in media \textbf{alta}, allora $PdV$ è grande e questo implica un lavoro grande.
+	\item Se durante l’espansione la pressione è in media \textbf{bassa}, allora $PdV$ è piccolo e questo implica lavoro piccolo.
+\end{itemize}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/image 1.png}
+\end{figure}
+
+Nel grafico si vede subito, perché l’aria sottesa alle curve degli spostamenti è diverso, quindi cambia anche il lavoro.
+
+\section{Primo principio della Termodinamica}
+
+Il primo principio della termodinamica è il \textbf{principio di conservazione dell’energia} applicato ai sistemi termodinamici.
+
+\begin{quote}
+La \textbf{variazione} di \textbf{energia interna} di un sistema è \textbf{uguale} al \textbf{calore scambiato} con l’esterno meno il lavoro compiuto dal sistema sull’esterno.
+
+\[
+dU = \delta Q-\delta L
+\]
+\end{quote}
+
+\subsection{Esperienza di Joule (1849)}
+
+L’esperienza di Joule è un esperimento storico che mostra in modo quantitativo che il \textbf{lavoro meccanico} e il \textbf{calore} sono due modi diversi di trasferire energia, ma sono \textbf{convertibili} e possono quindi essere misurati nelle \textbf{stesse unità}.
+
+\subsubsection*{Apparato sperimentale}
+
+Joule utilizza un \textbf{calorimetro} (un recipiente isolato termicamente, riempito d’acqua) all’interno del quale è immerso un sistema di \textbf{palette} (o un agitatore). Le palette vengono messe in rotazione da un meccanismo collegato a un \textbf{peso} che cade:
+
+\begin{itemize}
+	\item il peso, scendendo, perde energia potenziale gravitazionale;
+	\item questa energia viene trasformata in \textbf{lavoro meccanico} che fa ruotare le palette;
+	\item la rotazione genera attrito viscoso nel fluido (acqua), che si traduce in un aumento di temperatura.
+\end{itemize}
+
+Poiché il calorimetro è (idealmente) isolato, l’aumento di temperatura dell’acqua è attribuibile all’energia fornita tramite il lavoro meccanico.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/immagine.png}
+\end{figure}
+
+\subsubsection*{Osservazione fondamentale: lavoro $\leftrightarrow$ calore}
+
+Misurando:
+
+\begin{itemize}
+	\item il \textbf{lavoro totale} compiuto dal peso,
+	\item l’aumento di temperatura dell’acqua e quindi il \textbf{calore assorbito} dal calorimetro,
+\end{itemize}
+
+Joule trova una proporzionalità costante tra lavoro e calore.
+
+Storicamente, il risultato è espresso introducendo l’\textbf{equivalente meccanico della caloria}:
+
+\[
+\frac{L}{Q} = J \simeq 4.186 \ \text{J/cal}
+\]
+
+cioè:
+
+\[
+Q\ (\text{cal}) \;\longrightarrow\; JQ\ (\text{J})
+\]
+
+Questo significa che \textbf{una stessa quantità di energia} può essere contabilizzata come calore o come lavoro, a seconda del processo con cui viene trasferita.
+
+\subsubsection*{Trasformazione ciclica}
+
+L’esperimento viene discusso considerando una \textbf{trasformazione ciclica}, cioè un processo in cui il sistema torna allo stato iniziale.
+
+In una trasformazione ciclica:
+
+\begin{itemize}
+	\item lo stato finale coincide con quello iniziale;
+	\item la variazione di ogni funzione di stato è nulla.
+\end{itemize}
+
+Esprimendo il calore in joule, per ogni trasformazione ciclica vale:
+
+\[
+Q - L = 0
+\]
+
+ovvero:
+
+\[
+\frac{L}{Q} = 1.
+\]
+
+\textbf{In un ciclo, quindi, il lavoro compiuto dal sistema e il calore scambiato si compensano esattamente.}
+
+\section{Energia interna}
+
+\subsection{Introduzione dell’energia interna}
+
+Consideriamo ora due trasformazioni diverse $a$ e $b$ che portano il sistema dallo stesso stato iniziale $A$ allo stesso stato finale $B$.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/immagine 1.png}
+\end{figure}
+
+Percorrendo la trasformazione $a$ da $A$ a $B$ e tornando indietro con la trasformazione $b$ da $B$ ad $A$, si ottiene una trasformazione ciclica. Per il ciclo vale:
+
+\[
+(Q - L)_{\text{ciclo}} = 0.
+\]
+
+Il contributo totale sul ciclo può essere scritto come:
+
+\[
+(Q - L)_a + (Q - L)_{-b} = 0.
+\]
+
+Poiché percorrere una trasformazione al contrario cambia segno a calore e lavoro, si ottiene:
+
+\[
+(Q - L)_a - (Q - L)_b = 0,
+\]
+
+da cui segue:
+
+\[
+(Q - L)_a = (Q - L)_b.
+\]
+
+Questo risultato mostra che la quantità $Q - L$ \textbf{non dipende dalla trasformazione seguita}, ma solo dagli stati iniziali e finali.
+
+\subsection{Definizione di energia interna}
+
+Si introduce quindi una grandezza di stato $U$, detta \textbf{energia interna}, tale che:
+
+\[
+\Delta U = U(B) - U(A) = Q - L.
+\]
+
+In forma differenziale:
+
+\[
+dU = \delta Q - \delta L.
+\]
+
+Questa relazione costituisce il \textbf{Primo Principio della Termodinamica}.
+
+Il primo principio della termodinamica estende il \textbf{principio di conservazione dell’energia}, da un sistema meccanico (sottoposto a forze conservative) ad uno termodinamico che viene descritto in uno spazio di parametri termodinamici e che può scambiare anche calore con l’ambiente esterno.
+
+Questo principio, inoltre, dipende unicamente dagli stati iniziali e finali, non dal percorso della trasformazione, e vale anche se \textbf{la trasformazione non è quasi statica né irreversibile}. Nel caso di una trasformazione non quasi-statica, o irreversibile, per calcolare $\Delta U$ in una trasformazione da $A$ a $B$ è sufficiente considerare una qualunque trasformazione reversibile da $A$ a $B$.
+
+Un’analogia con la meccanica è l’\emph{energia potenziale}: in meccanica, per una forza conservativa (come la gravità), il lavoro dipende solo dagli estremi:
+
+\[
+W_{A \rightarrow B} = - \Delta U_{\text{pot}}
+\]
+
+Si può vedere questa cosa come un \textbf{parallelismo} tra meccanica e termodinamica
+
+\begin{itemize}
+	\item $U$ in termodinamica è come $U_{pot}$ in meccanica: dipende dallo stato e non dal percorso.
+	\item $Q, L$ sono invece il “modo” in cui l’energia viene trasferita lungo il percorso: possono cambiare, ma la variazione della funzione di stato resta la stessa.
+\end{itemize}
+
+\subsection{Casi studio}
+
+Dall’equazione del primo principio della termodinamica
+
+\[
+\Delta U = U(B) - U(A) = Q - L.
+\]
+
+si possono analizzare alcuni casi limite di particolare interesse.
+
+\subsubsection*{Caso 1: trasformazione adiabatica}
+
+Se non c’è scambio di calore con l’ambiente $Q = 0$, il primo principio diventa
+
+\[
+U(B) - U(A) = -L
+\]
+
+In questo caso, la variazione di energia interna è dovuta \textbf{solo al lavoro}:
+
+\begin{itemize}
+	\item Se $L > 0$ il sistema compie lavoro sull’ambiente (ad esempio, si espande)
+	\[
+	U(B) < U(A)
+	\]
+	e quindi l’energia interna \textbf{diminuisce}.
+	\item Se $L < 0$ l’ambiente compie lavoro sul sistema (ad esempio, una compressione)
+	\[
+	U(B) > U(A)
+	\]
+	quindi l’energia interna \textbf{aumenta}.
+\end{itemize}
+
+Si può fare un esempio con una trasformazione
+
+\subsubsection*{Caso 2: trasformazione senza lavoro}
+
+Se il sistema non compie nè subisce lavoro, $L = 0$, il primo principio si riduce a:
+
+\[
+U(B) - U(A) = Q
+\]
+
+in questo caso, la variazione di energia interna è dovuta \textbf{solo al calore scambiato}:
+
+\begin{itemize}
+	\item Se $Q > 0$ il sistema \textbf{assorbe} calore:
+	\[
+	U(B) > U(A)
+	\]
+	e la trasformazione è \textbf{endotermica}. Questo significa che l’energia interna \textbf{aumenta}.
+	\item Se $Q < 0$ il sistema \textbf{cede} calore:
+	\[
+	U(B) < U(A)
+	\]
+	e la trasformazione è \textbf{esotermica}. Questo significa che l’energia interna \textbf{diminuisce}.
+\end{itemize}
+
+\subsubsection*{Caso studio 3: trasformazione isocora}
+
+Una trasformazione \textbf{isocora} ha volume costante
+
+\[
+\Delta V = 0
+\]
+
+Poiché il lavoro di espansione è
+
+\[
+L = \int PdV \Rightarrow L =0
+\]
+
+Il primo principio della termodinamica si riduce, per un gas perfetto, a
+
+\[
+\Delta U = Q = nC_v(T_{fin}- T_{in})
+\]
+
+Il che spiega che l’energia interna \textbf{dipende esclusivamente dalla temperatura}.
+
+Poiché il volume è costante, l’equazione di stato dei gas perfetti
+
+\[
+PV = nRT
+\]
+
+si può riscrivere come
+
+\[
+\frac{P}{T} = \frac{nR}{V}
+\]
+
+Essendo $n, R, V$ costanti, segue che
+
+\[
+\frac{P}{T} = \text{costante}
+\]
+
+E da questo segue che, in una trasformazione isocora, \textbf{pressione e temperatura sono direttamente proporzionali}.
+
+\subsubsection*{Caso 4: trasformazione isoterma}
+
+Una trasformazione isoterma è una trasformazione a temperatura costante
+
+\[
+T = \text{costante}
+\]
+
+Per un gas perfetto, vale l’equazione di stato
+
+\[
+PV = nRT
+\]
+
+Poiché $T$ è costante, durante la trasformazione si ha
+
+\[
+P(V) = \frac{nRT}{V}
+\]
+
+Per cui la pressione non è costante, ma inversamente proporzionale al volume.
+
+\subsubsection*{Lavoro}
+
+Per una trasformazione quasi-statica, il lavoro elementare di espansione è
+
+\[
+\delta L = PdV
+\]
+
+Il lavoro totale compiuto dal sistema passando dal volume iniziale $V_{in}$ al volume finale $V_{fin}$  è
+
+\[
+L = \int_{V_{in}}^{V_{fin}} PdV
+\]
+
+Sostituendo l’espressione della pressione lungo l’isoterma:
+
+\[
+L = \int_{V_{in}}^{V_{fin}} \frac{nRT}{V} dV
+\]
+
+Poiché $n, R, T$ sono costanti si ottiene
+
+\[
+L = nRT \int_{V_{in}}^{V_{fin}} \frac{1}{V} dV = nRT \ln \left( \frac{V_{fin}}{V_{in}} \right)
+\]
+
+In particolare, il segno del lavoro poi dipende dai due volumi:
+
+\begin{itemize}
+	\item $V_{fin} > V_{in} \Rightarrow L >  0$ perché il gas compie lavoro sull’ambiente.
+	\item $V_{in} < V_{in} \Rightarrow L < 0$ perché l’ambiente compie lavoro sul gas.
+\end{itemize}
+
+Inoltre, per un gas perfetto l’energia interna dipende solo dalla temperatura e siccome in una trasformazione isoterma
+
+\[
+\Delta T = 0 \Rightarrow \Delta U = 0
+\]
+
+per il primo principio della termodinamica
+
+\[
+\Delta U = Q - L
+\]
+
+segue che
+
+\[
+Q = L
+\]
+
+Pertanto, il calore scambiato in una trasformazione isoterma è
+
+\[
+Q = nRT \ln \left( \frac{V_{fin}}{V_{in}} \right)
+\]
+
+\subsection{Energia interna di un corpo solido}
+
+Consideriamo un \textbf{corpo solido rigido}. Con una buona approssimazione:
+
+\begin{itemize}
+	\item Il volume e la forma sono costanti
+	\item Non viene compiuto lavoro di espansione
+\end{itemize}
+
+Da qui
+
+\[
+\Delta V \approx 0 \quad \Rightarrow \quad L \approx 0
+\]
+
+Dal primo principio della termodinamica
+
+\[
+\Delta U = Q - L
+\]
+
+segue che, per un solido rigido,
+
+\[
+\Delta U = Q
+\]
+
+In una trasformazione \textbf{quasi-statica}, il calore scambiato per una variazione infinitesima di temperatura è
+
+\[
+\delta Q = mc(T) dT
+\]
+
+Poiché $\delta Q = dU$ si ottiene
+
+\[
+dU = mc(T)dT
+\]
+
+\subsubsection*{Integrazione tra due stati}
+
+Integrando tra uno stato iniziale $A$ a una temperatura $T_A$ e uno stato finale $B$ a temperatura $T_B$:
+
+\[
+T(T_B) - U(T_A) = m \int_{T_A}^{T_B} c(T)dT
+\]
+
+Questa è l’espressione \textbf{generale} della variazione di energia interna di un corpo solido.
+
+\subsubsection*{Approssimazione del calore specifico costante}
+
+Come detto in precedenza, per molti solidi e in intervalli di temperatura non troppo ampi, si può  assumere
+
+\[
+c(T) \approx c = \text{costante}
+\]
+
+In questo caso
+
+\[
+U(T_B) - U(T_A) \approx mc(T_B -T_A)
+\]
+
+Ne segue che l’energia interna dipende linearmente dalla temperatura
+
+\[
+U(T) = mcT + \text{costante}
+\]
+
+Questo significa che, per un corpo solido rigido:
+
+\begin{itemize}
+	\item il calore scambiato non produce lavoro meccanico,
+	\item serve unicamente a modificare l’energia interna,
+	\item l’energia interna aumenta all’aumentare della temperatura.
+\end{itemize}
+
+\subsection{Energia interna di un gas perfetto}
+
+Un altro esperimento che fece Joule riguarda l’espansione libera di un gas rarefatto. Si considera un gas inizialmente confinato in un recipiente, separato da una valvola da una camera vuota. Aprendo la valvola il gas si espande \textbf{liberamente} occupando tutto il volume disponibile.
+
+Non c’è nessuno scambio di calore con l’esterno, quindi è una trasformazione adiabatica, e non c’è nessun lavoro compiuto sull’esterno (le pareti non si spostano e il gas si espande nel vuoto). Applicando il primo principio
+
+\[
+\Delta U = Q - L = 0 -0 = 0
+\]
+
+da qui
+
+\[
+U_{fin} = U_{in}
+\]
+
+Da questo notiamo che \textbf{l’energia interna del gas non cambia durante l’espansione libera}.
+
+\subsubsection*{Risultato sperimentale}
+
+Sperimentalmente, Joule osserva che
+
+\[
+\Delta T = 0
+\]
+
+non è di fatto banale, in quanto:
+
+\begin{itemize}
+	\item Il volume cambia.
+	\item La pressione cambia.
+	\item La temperatura rimane costante.
+\end{itemize}
+
+Possiamo trarre una conclusione, poiché,
+
+\[
+\Delta U = 0, \quad \Delta T = 0
+\]
+
+si deduce che per un \textbf{gas perfetto}, l’energia interna \textbf{dipende solo dalla temperatura} e non dal volume o dalla pressione.
+
+Quindi
+
+\[
+U = U(T)
+\]
+
+Questo risultato non vale in generale, ma solo nel modello del \textbf{gas perfetto}.
+
+\subsubsection*{Collegamento microscopico}
+
+La temperatura è legata all’energia cinetica media delle particelle
+
+\[
+\left< K \right> = \frac{3}{2} k_BT
+\]
+
+Poiché l’energia interna di un gas perfetto è puramente \textbf{cinetica} (nessuna interazione potenziale tra le particelle) se $T$ \textbf{non cambia}, allora \textbf{non cambia l’energia cinetica media} e quindi \textbf{non cambia} $U$.
+
+\section{Calore molare nei gas perfetti}
+
+\subsection{Calore molare a volume costante}
+
+Dal primo principio della termodinamica, in forma differenziale, si ha
+
+\[
+\delta Q = \delta L + dU
+\]
+
+Per una trasformazione \textbf{isocora} (volume costante), il lavoro di espansione è nullo
+
+\[
+\delta L = PdV = 0
+\]
+
+Quindi il primo principio si riduce a
+
+\[
+\delta Q = dU
+\]
+
+\subsubsection*{Definizione di calore molare a volume costante}
+
+Per un \textbf{gas perfetto}, l’energia interna dipende solo dalla temperatura
+
+\[
+U = U(T)
+\]
+
+In una trasformazione isocora, il calore scambiato serve interamente a variare l’energia interna:
+
+\[
+\delta Q = dU = nC_V dT
+\]
+
+Questo porta alla \textbf{definizione di calore molare a volume costante} $C_V$:
+
+\[
+C_V \equiv \frac{1}{n} \left( \frac{\delta Q}{dT} \right)_V
+\]
+
+\subsubsection*{Energia interna del gas perfetto}
+
+Integrando l’espressione
+
+\[
+dU = nC_VdT
+\]
+
+si ottiene
+
+\[
+U(T) = nC_VT + \text{costante}
+\]
+
+La costante dipende dalla scelta dello zero dell’energia interna ed è fisicamente irrilevante per le variazioni.
+
+Ne segue che, per un gas perfetto
+
+\[
+\Delta U = nC_V(T_{fin}- T_{in})
+\]
+
+\subsubsection*{Dipendenza di $C_V$ dalla temperatura}
+
+In generale, $C_V$ \textbf{può dipendere dalla temperatura}, come mostrato nella figura sotto (per $H_2$):
+
+\begin{itemize}
+	\item A basse temperatura contribuiscono solo i gradi di libertà traslazionali
+	\item Aumentando $T$ si attivano quelli rotazionali e vibrazionali
+\end{itemize}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/immagine 2.png}
+\end{figure}
+
+\emph{NB: Per gradi di libertà traslazionali, rotazionali e vibrazionali si intendono i moti che una particella può compiere.}
+
+Tuttavia, per un \textbf{ampio intervallo di temperatura}, si può assumere con buona approssimazione
+
+\[
+C_V = \text{costante}
+\]
+
+\subsection{Calore molare a pressione costante}
+
+In una trasformazione isobara si definisce il \textbf{calore molare a pressione costante $C_P$} come:
+
+\[
+\delta Q = nC_P dT
+\]
+
+Per un gas perfetto, inoltre, l’energia interna dipende solo da $T$, quindi
+
+\[
+dU = nC_V dT
+\]
+
+Sostituendo nel primo principio:
+
+\[
+nC_PdT = PdV + nC_VdT
+\]
+
+Ora si usa l’equazione di stato del gas perfetto
+
+\[
+PV = nRT
+\]
+
+e derivando (ricordando che $P, n, R$ sono costanti):
+
+\[
+PdV = nRdT
+\]
+
+Sostituendo nell’equazione di prima
+
+
+\begin{align*}
+nC_P dT &= nRdT + nC_VdT &\text{dividendo per } ndT \\
+C_P &= C_V+R
+\end{align*}
+
+
+Questa relazione dice che a pressione costante, il calore fornito al gas serve a due cose:
+
+\begin{enumerate}
+	\item Aumentare l’energia interna
+	\item Fornire anche l’energia necessaria al lavoro di espansione contro la pressione esterna.
+\end{enumerate}
+
+Per questo $C_P$ è sempre maggiore di $C_V$ e la differenza vale esattamente $R$.
+
+\subsection{Trasformazione adiabatica reversibile}
+
+Una trasformazione adiabatica (come visto prima) è una trasformazione in cui non c’è scambio di calore con l’esterno ($\delta Q = 0$), se è reversibile (quasi-statica), allora in ogni istante il gas è in equilibrio e possiamo usare
+
+\[
+\delta L = PdV
+\]
+
+\subsubsection*{Legame tra lavoro ed energia interna}
+
+Dal primo principio, ponendo $\delta Q = 0$ abbiamo che
+
+\[
+0 = PdV + dU \quad \Rightarrow \quad dU = -PdV
+\]
+
+Per un gas perfetto, vale inoltre
+
+\[
+dU = nC_VdT
+\]
+
+Quindi otteniamo l’equazione dell’adiabatica reversibile
+
+\[
+nC_VdT = -PdV
+\]
+
+Usando l’equazione di stato
+
+\[
+P = \frac{nRT}{V}
+\]
+
+si può sostituire e avere
+
+\[
+nC_VdT = -\frac{nRT}{V}dV
+\]
+
+Semplificando $n$ e dividendo per $T$ si ha
+
+\[
+C_V \frac{dT}{T} = -R \frac{dV}{V}
+\]
+
+Usando la relazione $C_P = C_V + R \Rightarrow R = C_P - C_V$ quindi
+
+\[
+C_V \frac{dT}{T} = -(C_P-C_V) \frac{dV}{V}
+\]
+
+Dividendo tutto per $C_V$ si può introdurre il termine $\gamma$:
+
+\[
+\gamma = \frac{C_P}{C_V}
+\]
+
+Dopo si ottiene
+
+\[
+\frac{dT}{T} = -(\gamma -1) \frac{dV}{V}
+\]
+
+Integrando tra stato iniziale e finale
+
+\[
+\ln T = - (\gamma -1) \ln V + \text{costante}
+\]
+
+Da cui si tira fuori che
+
+\[
+TV^{\gamma -1} = \text{costante}
+\]
+
+\subsubsection*{Forme equivalenti}
+
+Utilizzando l’equazione di stato dei gas perfetti, sostituendo $T \propto  V^{-(\gamma-1)}$ si ottiene
+
+\[
+PV^{\gamma} = \text{costante}
+\]
+
+\subsubsection*{Lavoro e variazioni di temperatura}
+
+Poiché $\delta Q = 0$:
+
+\[
+\Delta U = -L
+\]
+
+E siccome, per un gas perfetto
+
+\[
+\Delta U = nC_V (T_{fin}-T_{in})
+\]
+
+segue che
+
+\[
+L = -nC_V(T_{fin}-T_{in}) = nC_V(T_{in}-T_{fin})
+\]
+
+E il segno viene interpretato così:
+
+\begin{itemize}
+	\item \textbf{Espansione adiabatica}:  $V$ aumenta, il gas compie lavoro e la temperatura diminuisce.
+	\item \textbf{Compressione adiabatica}: $V$ diminuisce, il gas riceve lavoro e la temperatura aumenta.
+\end{itemize}
+
+\section{Secondo principio della termodinamica}
+
+Dal primo principio della termodinamica sappiamo che, per una trasformazione da uno stato iniziale $A$ a uno stato finale $B$,
+
+\[
+Q-L = U(B) - U(A)
+\]
+
+In particolare, se la trasformazione è \textbf{ciclica}, lo stato finale coincide con quello iniziale e quindi
+
+\[
+\Delta U = 0 \quad \Rightarrow \quad Q = L
+\]
+
+Il primo principio esprime quindi un bilancio energetico, ma \textbf{non pone alcun limite} alla possibilità di convertire calore in lavoro o lavoro in calore.
+
+Solo dal primo principio sembrerebbe possibile:
+
+\begin{itemize}
+	\item trasformare interamente calore in lavoro
+	\item trasferire calore spontaneamente da un corpo freddo a uno caldo
+\end{itemize}
+
+\textbf{In natura, tuttavia, questa simmetria non si verifica}. Il secondo principio della termodinamica introduce questi \textbf{limiti}.
+
+\subsection{Enuncialo di Clausius}
+
+\begin{quote}
+È impossibile realizzare una trasformazione termodinamica il cui unico risultato sia il trasferimento di calore da un sistema a temperatura inferiore a uno a temperatura superiore.
+\end{quote}
+
+In altre parole:
+
+\begin{itemize}
+	\item Il calore \textbf{non può fluire spontaneamente} da un corpo freddo a uno caldo.
+	\item Un tale trasferimento è possibile solo se accompagnato da un altro effetto, in particolare \textbf{l’intervento di lavoro esterno}.
+\end{itemize}
+
+Questo è il principio di funzionamento dietro a una macchina frigorifera:
+
+\begin{enumerate}
+	\item Il calore viene sottratto alla sorgente fredda
+	\item Una parte di calore viene ceduta alla sorgente calda
+	\item Ciò è possibile solo grazie al lavoro fornito dall’esterno
+\end{enumerate}
+
+Se il lavoro fosse nullo, il trasferimento di calore dalla sorgente fredda a quella calda sarebbe \textbf{impossibile}.
+
+\subsection{Enunciato di Kelvin-Planck}
+
+\begin{quote}
+È impossibile realizzare una trasformazione termodinamica ciclica il cui unico risultato sia quello di assorbire calore da una sola sorgente e trasformarlo integralmente in lavoro.
+\end{quote}
+
+Questo enunciato afferma che:
+
+\begin{itemize}
+	\item Una \textbf{macchina termica ciclica} non può convertire tutto il calore assorbito in lavoro
+	\item Una parte del calore deve necessariamente essere ceduta a una seconda sorgente.
+\end{itemize}
+
+In altre parole, non esistono macchine termiche con rendimento del 100\% (macchina perpetua del secondo tipo).
+
+\subsection{Equivalenza degli enunciati di Clausius e Kelvin-Planck}
+
+Gli enunciati di Clausius e Kelvin-Planck si possono definire \textbf{equivalenti}, nel senso che:
+
+\begin{itemize}
+	\item Se uno dei due fosse violato, allora anche l’altro lo sarebbe
+	\item Entrambi esprimono lo stesso contenuto fisico del secondo principio della termodinamica, ma da due punti di vista diversi.
+\end{itemize}
+
+In particolare:
+
+\begin{enumerate}
+	\item L’enunciato di Clausius enfatizza la \textbf{direzione privilegiata del flusso di calore},
+	\item L’enunciato di Kelvin-Planck enfatizza i \textbf{limiti alla conversione del calore in lavoro}.
+\end{enumerate}
+
+Entrambi mostrano che i processi naturali non sono simmetrici nel tempo e che non tutte le trasformazioni energeticamente possibili sono fisicamente realizzabili.
+
+\section{Ciclo di Carnot}
+
+\subsection{Macchina termica reversibile a gas perfetto}
+
+Il \textbf{ciclo di Carnot} è un ciclo termodinamico \textbf{reversibile} realizzato da un gas perfetto e avviene tra due sorgenti termiche:
+
+\begin{itemize}
+	\item sorgente calda a temperatura $T_C$
+	\item sorgente fredda a temperatura $T_F$, con $T_C > T_F$
+\end{itemize}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/image 2.png}
+\end{figure}
+
+Nel diagramma $P-V$ il ciclo è composto da \textbf{quattro trasformazioni}:
+
+\begin{enumerate}
+	\item \textbf{Espansione isoterma} a temperatura costante $T = T_C$ ($A \rightarrow B$).
+	\item \textbf{Espansione adiabatica} dove non c’è scambio di calore ($Q = 0$) e la temperatura del gas scende da $T_C$ a $T_F$.
+	\item \textbf{Compressione isoterma} a temperatura costante $T = T_F$ ($C \rightarrow D$) dove il gas cede calore alla sorgente fredda ($Q_F < 0$).
+	\item \textbf{Compressione adiabatica} ($D \rightarrow A$), qui non c’è scambio di calore ($Q = 0$) e la temperatura risale da $T_F$ a $T_C$, tornando allo stato iniziale.
+\end{enumerate}
+
+Il ciclo di Carnot è quindi una trasformazione \textbf{ciclica e reversibile} (nel caso ideale).
+
+\subsection{Rendimento di una macchina termica}
+
+Consideriamo una qualunque \textbf{macchina ciclica} che lavori tra due sorgenti.
+
+Poiché il ciclo è chiuso
+
+\[
+\Delta U = 0
+\]
+
+Dal primo principio segue che
+
+\[
+L = Q
+\]
+
+Nel caso di due sorgenti
+
+\begin{itemize}
+	\item la macchina \textbf{assorbe} calore $Q_C > 0$ dalla sorgente calda
+	\item la macchina \textbf{cede} calore $Q_F$ dalla sorgente fredda
+\end{itemize}
+
+Il calore totale scambiato sul ciclo è
+
+\[
+Q = Q_C + Q_F
+\]
+
+Dato che $Q_F < 0$ il lavoro compiuto dalla macchina risulta
+
+\[
+L = Q_C + Q_F = |Q_C| - |Q_F|
+\]
+
+\subsection{Rendimento}
+
+Il \textbf{rendimento} $\eta$ di una macchina termica è definito come rapporto tra il lavoro utile prodotto e il calore assorbito dalla sorgente calda
+
+\[
+\eta = \frac{L}{|Q_C|}
+\]
+
+Sostituendo $L = |Q_C| - |Q_F|$:
+
+\[
+L
+ = \frac{|Q_C| - |Q_F|}{Q_C} = 1 - \frac{|Q_F|}{|Q_C|}
+\]
+
+Per il \textbf{ciclo di Carnot}, si può dimostrare che il rendimento non dipende dal gas usato né dai dettagli del ciclo, ma solo dalle \textbf{temperature} delle due sorgenti:
+
+\[
+\eta = 1 - \frac{|Q_F|}{|Q_C|} = 1 - \frac{T_F}{T_C}
+\]
+
+Quindi, fissate $T_C$ e $T_F$, il ciclo di Carnot rappresenta una macchina termica reversibile con rendimento determinato unicamente dal rapporto tra le temperature.
+
+\subsection{Teorema di Carnot}
+
+Una conseguenza del secondo principio della termodinamica è il \textbf{teorema di Carnot}:
+
+\begin{quote}
+Per una qualunque \textbf{macchina termica} che lavori tra due sorgenti a temperature $T_C$ e $T_F$, con $T_C > T_F$, il rendimento è \textbf{minore o al più uguale} al rendimento di una macchina di Carnot che operi tra le stesse due temperature.
+\end{quote}
+
+Ovvero:
+
+\[
+\eta = 1- \frac{|Q_F|}{|Q_C|}
+ \leq 1 - \frac{T_F}{T_C}
+\]
+
+L’uguaglianza in questa equazione, vale se e solo se la macchina è \textbf{reversibile}. Questo significa che nessuna macchina reale può avere un rendimento superiore a quello di Carnot e che il ciclo di Carnot rappresenta un \textbf{limite teorico superiore} al rendimento.
+
+\subsubsection*{Disuguaglianza di Clausius}
+
+Il teorema di Carnot può essere enunciato anche in un’altra forma, quella di \textbf{Clausius}.
+
+Per una macchina termica reale che lavora tra due sorgenti
+
+\[
+\frac{|Q_C|}{T_C} - \frac{|Q_F|}{T_F} \le 0
+\]
+
+Tenendo conto dei segni dei calori ($Q_C > 0, Q_F < 0$), questa relazione può essere scritta come
+
+\[
+\frac{Q_C}{T_C} + \frac{Q_F}{T_F} \le 0
+\]
+
+In forma più generale, se una trasformazione ciclica coinvolge più sorgenti termiche
+
+\[
+\sum_{i=C, F} \frac{Q_I}{T_i} \le 0
+\]
+
+Questa relazione è nota come \textbf{disuguaglianza di Clausius} ed è un \textbf{enunciato alternativo del secondo principio della Termodinamica}.
+
+\section{Entropia}
+
+Si può dimostrare che la disuguaglianza di Clausius vale per \textbf{ogni ciclo termodinamico}. Nel caso in cui il ciclo approssimato come una successione di scambi di calore $\delta Q$ con sorgenti alla temperatura $T$, la disuguaglianza si può scrivere in forma integrale:
+
+\[
+\sum_{i=C, F} \frac{Q_I}{T_i} \le 0 \Rightarrow \oint \frac{dQ}{T} \le 0
+\]
+
+\subsection{Cicli reversibili}
+
+Nel caso di un ciclo reversibile allora si scrive
+
+\[
+\oint \frac{dQ_{\text{rev}}}{T} = 0
+\]
+
+Una conseguenza di questa equazione è il fatto che, scegliendo un ciclo formato da un percorso $A \rightarrow B$ e poi dal percorso di ritorno reversibile $B \rightarrow A$, si può scrivere
+
+\[
+\int_A^B \frac{\delta Q_{rev}}{T} + \int_B^A \frac{\delta Q_{rev}}{T}
+ = 0 \Rightarrow
+\int_A^B \frac{\delta Q_{rev}}{T} = \int_B^A \frac{\delta Q_{rev}}{T}
+\]
+
+Questo implica che l’integrale tra due stati, lungo un percorso reversibile è \textbf{indipendente dalla trasformazione seguita} (dipende solo dagli estremi).
+
+\subsection{Definizione di entropia}
+
+Poiché l’integrale
+
+\[
+\int_A^B \frac{\delta Q_{rev}}{T}
+\]
+
+dipende solo dagli stati $A$  e $B$, si introduce una nuova funzione di stato $S$, chiamata \textbf{entropia}, definita tramite:
+
+\[
+\int_A^B \frac{\delta Q_{rev}}{T} = S(B) - S(A)
+\]
+
+Quindi l’entropia è una grandezza che:
+
+\begin{itemize}
+	\item è una \textbf{funzione di stato}, cioè dipende solo dallo stato del sistema termodinamico
+	\item è definita a \textbf{meno di una costante additiva}, analogamente all'energia potenziale ed all'energia interna.
+\end{itemize}
+
+\subsection{Entropia e Secondo principio della Termodinamica}
+
+Considerando due stati $A$ e $B$ collegati da:
+
+\begin{itemize}
+	\item un percorso \textbf{irreversibile} $I$ $(A \rightarrow B)$;
+	\item un percorso \textbf{reversibile} $II$ $(B \rightarrow A)$.
+\end{itemize}
+
+Applicando la disuguaglianza di Clausius:
+
+\[
+\oint \frac{\delta Q}{T} = \int_I \frac{\delta Q_{irr}}{T} + \int_{II} \frac{\delta Q_{rev}}{T}
+\]
+
+Poiché il tratto $II$ va da $B$ ad $A$,
+
+\[
+\int_{II} \frac{\delta Q_{rev}}{T}
+ = - \int_A^B \frac{\delta Q_{rev}}{T}
+\]
+
+ma per definizione di entropia lungo un percorso reversibile:
+
+\[
+\int_A^B \frac{\delta Q_{rev}}{T} = S(B) - S(A)
+\]
+
+Quindi
+
+\[
+\int_{II} \frac{\delta Q_{rev}}{T} - (S(B) - S(A)) \le 0
+\]
+
+da cui segue la relazione
+
+\[
+\int_A^B \frac{\delta Q_{irr}}{T}
+ \le S(B) - S(A) = \Delta S
+\]
+
+Questa equazione dice che la variazione di entropia tra due stati è sempre \textbf{maggiore o uguale} all’integrale calcolato lungo un percorso irreversibile.
+
+\subsubsection*{Nota: trasformazione adiabatica}
+
+Nel caso di una trasformazione adiabatica, allora $\delta Q_{irr} = 0$, quindi
+
+\[
+0 \le \Delta S \quad \Rightarrow \quad \Delta S_{\text{adiabatica}} \ge 0
+\]
+
+\emph{NB: Vale solo se la trasformazione è reversibile.}
+
+\subsection{Secondo Principio espresso in termini di Entropia}
+
+Se un sistema è \textbf{isolato}, non può scambiare calore con l’esterno, quindi
+
+\[
+\delta Q_{irr} = 0
+\]
+
+E allora per qualsiasi trasformazione che avviene in un sistema isolato:
+
+\[
+\Delta S_{si} \ge 0
+\]
+
+dove \emph{si} sta per “sistema isolato”.
+
+Questo significa che:
+
+\begin{itemize}
+	\item L’entropia di un \textbf{sistema isolato} \textbf{non può diminuire}.
+	\item Ogni trasformazione \textbf{irreversibile} comporta un \textbf{aumento} dell’entropia totale.
+	\item Una trasformazione \textbf{reversibile} non comporta variazione dell’entropia totale.
+\end{itemize}
+
+\subsection{Sistema + ambiente}
+
+Spesso l’insieme $\text{sistema} + \text{ambiente}$ viene considerato come sistema isolato. In tal caso l’entropia totale è la somma
+
+\[
+S = S_{\text{ambiente}} + S_{\text{sistema}} \Rightarrow \Delta S_{\text{sist+amb}} \ge 0
+\]
+
+Quindi le trasformazioni irreversibili fanno aumentare l’entropia totale del sistema + l’ambiente e le trasformazioni reversibili non cambiano l’entropia totale.
+
+\subsubsection*{Nota sull’irreversibilità}
+
+Un’irreversibilità \textbf{non} \textbf{implica necessariamente} che l’entropia del solo sistema aumenti, potrebbe darsi che:
+
+\[
+\Delta S_{\text{sist}} < 0
+\]
+
+l’importante è che venga rispettato
+
+\[
+\Delta S_{\text{sist+amb}} \ge 0
+\]
+
+\subsection{Entropia dell’Universo}
+
+L’universo può essere trattato come \textbf{il sistema isolato per eccellenza}. Per un sistema isolato, vale il secondo principio nella forma
+
+\[
+\Delta S_{\text{universo}} \ge 0
+\]
+
+Pensandolo in forma dinamica, ovvero durante un’evoluzione temporale, possiamo esprimerlo come
+
+\[
+\frac{dS_{\text{universo}}}{dt} \ge 0
+\]
+
+Il significato è che l’\textbf{entropia totale dell’universo non diminuisce}: cresce a causa delle trasformazioni irreversibili.
+
+Si possono descrivere i due principi della termodinamica, nel contesto dell’universo, come:
+
+\begin{enumerate}
+	\item \textbf{Primo principio}: l’energia totale dell’universo è costante.
+	\item \textbf{Secondo principio}: l’entropia totale dell’universo \textbf{cresce} a causa delle trasformazioni irreversibili.
+\end{enumerate}
+
+\subsubsection*{Freccia del tempo dell’universo}
+
+Dato che l’entropia dell’universo cresce solamente, questo fornisce una \textbf{direzione privilegiata} all’evoluzione dei processi naturali: questa si chiama \textbf{freccia del tempo}.
+
+In particolare, nelle \textbf{trasformazioni adiabatiche irreversibili} l’entropia può solo aumentare, e di conseguenza non può tornare allo stato iniziale. Quindi, se l’universo nel suo complesso può essere visto come un sistema isolato in cui i processi reali sono irreversibili, l’universo “non può tornare indietro”.
+
+\subsection{Calcolo dell’entropia in casi notevoli}
+
+Per definizione, lungo una trasformazione \textbf{reversibile}:
+
+\[
+dS = \frac{\delta Q_{rev}}{T}
+\]
+
+Dal primo principio in forma differenziale $\delta Q_{rev} = dU + \delta L_{rev}$, quindi
+
+\[
+dS = \frac{dU + \delta L_{rev}}{T}, \quad \Delta S = S(B) - S(A) = \int_A^B \frac{dU + \delta L_{rev}}{T}
+\]
+
+Grazie a queste formule possiamo esprimere, per certi casi notevoli, $dU$ e $\delta L_{rev}$ in funzione delle variabili di stato.
+
+\subsection{Entropia di un corpo solido}
+
+Per un \textbf{corpo solido} assumiamo:
+
+\begin{enumerate}
+	\item Dilatazione termica trascurabile $\Rightarrow dV = 0$
+	\item lavoro trascurabile $\Rightarrow \delta L_{rev} = 0$
+	\item calore specifico circa costante
+\end{enumerate}
+
+Quindi:
+
+\[
+dU = mcdT, \quad dS = \frac{mcdT}{T}
+\]
+
+Integrando tra $T_A$ e $T_B$:
+
+\[
+S(B) - S(A) = mc \int_{T_A}^{T_B} \frac{dT}{T} = mc \ln \left( \frac{T_B}{T_A} \right)
+\]
+
+Da questo segue che l’entropia di un solito può essere scritta come
+
+\[
+S(T) = mc \ln T + k
+\]
+
+dove $k$ è una costante.
+
+\subsubsection*{Esempio: entropia in uno scambio termico}
+
+Consideriamo due corpi a temperature iniziali $T_1$ e $T_2$, messi in contatto termico in un \textbf{sistema isolato}. Essendo isolato $Q_1 = -Q_2$. Con calori specifici $c_1, c_2$ e masse $m_1, m_2$:
+
+\[
+Q_1 = m_1c_1(T_{eq} - T_1), \quad Q_2 = m_2c_2(T_{eq}-T_2)
+\]
+
+da cui la temperatura di equilibrio
+
+\[
+T_{eq} = \frac{m_1c_1T_1 + m_2c_2T_2}{m_1c_1 + m_2c_2}
+\]
+
+\subsubsection*{Esempio: calcolo dell’entropia nello scambio termico simmetrico}
+
+Per semplicità, se
+
+\[
+m_1 = m_2 = m, \quad c_1 = c_2 = c
+\]
+
+allora:
+
+\[
+T_{eq} = \frac{T_1 + T_2}{2}
+\]
+
+Usando $S(T) = mc\ln T$, le variazioni di entropia dei due corpi sono
+
+\[
+\Delta S_1 = mc \ln \left( \frac{T_{eq}}{T_1}\right), \quad \Delta S_2 = mc \ln \left( \frac{T_{eq}}{T_2} \right)
+\]
+
+Quindi
+
+\[
+\Delta S_{tot} = \Delta S_1 + \Delta S_2 = mc \ln \left( \frac{ T_{eq}^2}{T_1T_2} \right) = mc \ln \left( \frac{(T_1+T_2)^2}{4T_1T_2} \right)
+\]
+
+Poiché
+
+\[
+\frac{(T_1+T_2)^2}{4T_1T_2} \ge 1
+\]
+
+segue che $\Delta S_{tot} \ge 0$. Quindi lo scambio termico è un processo \textbf{spontaneo}.
+
+\subsection{Entropia di un gas perfetto}
+
+Per un gas perfetto abbiamo
+
+\[
+dU = nC_VdT, \quad \delta L_{rev} = PdV = \frac{nRT}{V}dV
+\]
+
+La variazione di entropia $\Delta S$ può essere calcolata anche se la trasformazione non è reversibile, in quanto l’entropia è una funzione di stato. Quindi il pedice $rev$ indica unicamente la necessità di sostituire la trasformazione irreversibile con un insieme di trasformazioni reversibili.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/image 3.png}
+\end{figure}
+
+\begin{align*}
+\Delta S
+&= \int_A^B \frac{dQ_{\text{rev}}}{T}
+ = S(B) - S(A) \\
+&= \left[ S(C) - S(A) \right]_{V=\text{costante}}
+ + \left[ S(B) - S(C) \right]_{T=\text{costante}}
+\end{align*}
+
+Da qui:
+
+\begin{align*}
+S(B)-S(A)
+&= \int_A^B \frac{\delta Q_{\mathrm{rev}}}{T} \\
+\intertext{(definizione di variazione di entropia)}
+&= \int_A^B \frac{dU + \delta L_{\mathrm{rev}}}{T} \\
+\intertext{(Primo Principio per trasformazioni reversibili)}
+&= \int_A^B \frac{nC_V\,dT + P\,dV}{T} \\
+\intertext{(gas perfetto: $dU=nC_V\,dT$, $\delta L_{\mathrm{rev}}=P\,dV$)}
+&= nC_V \ln\!\left(\frac{T_B}{T_A}\right)
+  + nR \ln\!\left(\frac{V_B}{V_A}\right).
+\end{align*}
+
+
+
+
+Quindi  possiamo dire che la variazione di entropia in un gas perfetto, in un qualsiasi tipo di trasformazione, è
+
+\[
+\Delta S
+=
+\underbrace{nC_V \ln\!\left(\frac{T_B}{T_A}\right)}_{\text{entropia di riscaldamento}}
+\;+\;
+\overbrace{nR \ln\!\left(\frac{V_B}{V_A}\right)}^{\text{entropia di espansione}}
+\]
+
+\section{Entropia e Disordine}
+
+Le frasi “l’entropia misura il disordine dell’universo” e “il secondo principio comporta un aumento del disordine dell’universo” sono frasi \textbf{fuorvianti}. Disordine, infatti, è un termine qualitativo e ambiguo, mentre l’entropia in fisica ha un significato più preciso e quantitativo.
+
+\subsection{Entropia e probabilità termodinamica}
+
+Sarebbe più corretto legare l’entropia alla \textbf{probabilità termodinamica} $W$, tramite \textbf{l’equazione di Boltzmann}
+
+\[
+S = k_B \ln W
+\]
+
+dove $W$ è la \textbf{probabilità termodinamica}, cioè una misura di quanti modi microscopici realizzano lo stesso stato macroscopico. Il logaritmo inoltre è una funzione \textbf{crescente}, quindi se $W$ aumenta allora aumenta anche $\ln W$ e quindi aumenta anche l’entropia.
+
+\subsection{Microstati e macrostati}
+
+La probabilità termodinamica $W$ misura il numero di modi, a livello microscopico (i microstati), in cui un certo stato macroscopico (macrostato) può essere realizzato.
+
+Un esempio è contare quante volte il numero $7$ (macrostato) può essere composto con somme di numeri naturali (microstati):
+
+\[
+7 = (1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1) \Rightarrow W = 6
+\]
+
+Per il macrostato “somma $2$” esiste un solo modo $2 = (1, 1) \Rightarrow W = 1$.
+
+Grazie a questa interpretazione, si può formulare il secondo principio così:
+
+\begin{quote}
+Le trasformazioni spontanee sono quelle che comportano un \textbf{aumento della probabilità termodinamica}.
+\end{quote}
+
+Quindi la probabilità termodinamica dell’universo aumenta a causa delle trasformazioni irreversibili, e dato che $S = k_B \ln
+W$ l’aumento di $W$ si traduce nell’aumento di entropia.
+
+\subsection{Esperimento con molecole}
+
+Ipotizziamo un \textbf{sistema isolato} costituito da \textbf{due molecole} ($N_{tot} = 2$) contenute in una scatola divisa in due compartimenti, sinistro e destro.
+
+\subsubsection*{Stato iniziale}
+
+All’istante iniziale $t=0$ il setto è \textbf{chiuso} ed entrambe le molecole si trovano nel compartimento di sinistra. Il sistema è \textbf{vincolato}: non ci sono alternative a questa configurazione.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/image 4.png}
+\end{figure}
+
+\subsubsection*{Setto aperto}
+
+Se il setto viene aperto le molecole possono muoversi liberamente e diventano possibili tre configurazioni macroscopiche:
+
+\begin{enumerate}
+	\item Entrambe le molecole a sinistra ($N_2 = 2, N_D = 0$)
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.6\textwidth]{images/image 5.png}
+	\end{figure}
+	\item Una molecola a destra e l’altra a sinistra ($N_S = 1, N_D = 1)$
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.6\textwidth]{images/image 6.png}
+	\end{figure}
+	\item Entrambe le molecole a destra ($N_S = 0, N_D = 2)$
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.6\textwidth]{images/image 7.png}
+	\end{figure}
+\end{enumerate}
+
+Dal punto di vista delle \textbf{leggi microscopiche}, tutte e tre sono possibili: non esiste alcun divieto dinamico.
+
+La differenza infatti non è nella possibilità ma nella \textbf{probabilità termodinamica $W$:}
+
+\begin{itemize}
+	\item Le configurazioni sbilanciate possono essere ottenute in \textbf{un solo modo microscopico}.
+	\item La configurazione bilanciata può essere ottenuta in \textbf{più modi microscopici}.
+\end{itemize}
+
+Quindi $W$ è massimo per la configurazione con molecole equamente distribuite, di conseguenza l’entropia è massima per quella configurazione.
+
+Poiché il numero totale di configurazioni è molto alto, la \textbf{varianza è molto alta}, quindi il sistema cambia facilmente la configurazione.
+
+\subsubsection*{Aumento del numero di molecole}
+
+Se aumentiamo il numero totale di molecole:
+
+\begin{itemize}
+	\item Per $N_{tot} = 10$ la configurazione simmetrica è \textbf{già molto più probabile} di quelle asimmetriche
+	\item per $N_{tot} = 200$ la probabilità $W$ è \textbf{fortemente centrata} attorno alla configurazione con molecole equamente distribuite.
+\end{itemize}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/image 8.png}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/image 9.png}
+\end{figure}
+
+Da questo esperimento possiamo capire che, nonostante a livello micrscopico le leggi della Natura non abbiano traccia di irreversibilità, e infatti non vietano configurazioni asimmetriche, le configurazioni con una più alta W sono quelle più probabili; queste ultime diventano altamente più probabili quando il numero di molecole diventa molto grande, e le fluttuazioni a configurazioni con W più piccola (asimmetriche) diventano molto poco probabili.
+
+\[
+\text{Aumento di } W \Leftrightarrow \text{Aumento di entropia}
+\]
+
+\subsection{Equazione di Gibbs}
+
+Per descrivere in modo più generale il legame tra entropia e probabilità, non è sufficiente limitarsi ai soli \textbf{sistemi isolati}. In questi casi entra in gioco una formulazione più ampia dell’entropia nota come \textbf{equazione di Gibbs}:
+
+\[
+S = - k_B \sum_{i=1}^W p_i \ln p_i
+\]
+
+dove $p_i$ è la probabilità che il sistema si trovi nel microstato $i$.
+
+Questa espressione è valida anche per \textbf{sistemi non isolati} e tiene conto del fatto che i diversi microstati non sono necessariamente equiprobabili.
+
+Nel caso particolare di un \textbf{sistema isolato}, tutti i microstati sono equiprobabili:
+
+\[
+p_1 = p_2 = \dots = p_w = \frac{1}{W}
+\]
+
+e la formula di Gibbs si riduce alla relazione di Boltzmann $S = k_B \ln W$. Questo mostra che la formula di Boltzmann non è altro che un caso speciale della definizione più generale di Gibbs.
+
+\subsubsection*{Entropia ed equilibrio termico}
+
+Per un sistema termodinamico in equilibrio a temperatura $T$, le probabilità dei microstati non sono uguali ma seguono la \textbf{distribuzione di Boltzmann}:
+
+\[
+p_i = Ae^{-E_i/(k_BT)}
+\]
+
+dove $E_i$ è l’energia del microstato e $A$ è una costante di normalizzazione.
+
+In questo contesto, l’entropia misura \textbf{quanto è distribuita la probabilità} tra i microstati:
+
+\begin{itemize}
+	\item Se la probabilità è concentrata in pochi microstati, l’entropia è bassa
+	\item Se la probabilità è distribuita su molti microstati, l’entropia è alta
+\end{itemize}
+
+Da questo, possiamo trarre una conclusione: l’universo \textbf{evolve spontaneamente verso configurazioni statisticamente più probabili} perché l’entropia dell’universo è sempre crescente.
+
+Da qui possiamo anche capire perché il termine disordine è solo una metafora, ciò che conta davvero è il \textbf{numero di microstati compatibili con un macrostato}.
+
+\subsection{Entropia e informazione}
+
+Un’altra formulazione molto simile è \textbf{l’entropia di Shannon}
+
+\[
+S = - \alpha k_B \sum_i p_i \log_2 p_i
+\]
+
+La differenza principale evidenziata è che qui compare il logaritmo in base $2$, e un fattore $\alpha$ che normalizza.
+
+L’entropia di Shannon quantifica la \textbf{mancanza di informazione} che abbiamo su un sistema. In particolare, più grande è l’entropia di Shannon meno sappiamo \textbf{quale microstato} stia realizzando il macrostato osservato. Quindi se un macrostato può essere realizzato da molti microstati con probabilità distribuite, la nostra descrizione “macroscopica” contiene \textbf{meno informazioni} sul dettaglio microscopico.
+
+\subsection{Entropia e buchi neri (non per orale)}
+
+Un \textbf{buco nero} è un corpo celeste con un \textbf{campo gravitazionale estremamente intenso}, tanto che la sua \textbf{velocità di fuga} supera la velocità della luce. Per questo, ciò che entra in una certa regione dello spazio non può più uscire né comunicare con l’esterno.
+
+\subsubsection*{Orizzonte degli eventi}
+
+Un buco nero è caratterizzato da una superficie critica chiamata \textbf{orizzonte degli eventi}. Il suo raggio, per un buco nero è il \textbf{raggio di Schwarzschild}:
+
+\[
+r_{sh} = \frac{2GM}{c^2}
+\]
+
+La regione interna all’orizzonte degli eventi \textbf{non può comunicare con l’esterno}. Non si possono avere informazioni su ciò che avviene oltre l’orizzonte, nulla può superarlo.
+
+\subsubsection*{Temperatura}
+
+I buchi neri, sorprendentemente, hanno un’\textbf{entropia}, perché emettono una \textbf{radiazione termica} detta \textbf{radiazione di Hawking}, in modo analogo a qualsiasi corpo con temperatura $T \neq 0$. La temperatura del buco nero è data da:
+
+\[
+T_{\text{buco nero}} = \frac{\hbar c^{3}}{8\pi G M k_B}
+\]
+
+Questa formula mostra subito che \textbf{più grande è la massa $M$, più piccola è la temperatura}. Infatti per buchi neri astronomici, la temperatura è in genere \textbf{molto piccola} tanto che, a lungo andare, la radiazione porta alla loro \textbf{evaporazione}.
+
+\subsubsection*{Entropia}
+
+Usando l’analogia con un sistema che scambia calore in modo reversibile ($\delta Q_{rev} = TdS$), si può associare un’entropia anche al buco nero proporzionale all’\textbf{area dell’orizzonte degli eventi}:
+
+\[
+S_{\text{buco nero}} = \frac{A}{4}, \quad A = 4\pi r^2_{sh}
+\]
+
+\section{Irraggiungibilità dello zero assoluto}
+
+\subsection{Terzo principio della Termodinamica}
+
+Sperimentalmente si osserva che, in \textbf{processi isotermi} che coinvolgono solo \textbf{stati di equilibrio interno} (cioè descrivibili completamente dai parametri termodinamici $P, T, \dots$ e non dipendenti dalla “storia” del materiale), la variazione di entropia tende a zero quando la temperatura tende allo \textbf{zero assoluto}:
+
+\[
+\lim_{T \rightarrow 0}\Delta S = 0
+\]
+
+Questa osservazione viene elevata a principio fondamentale e viene chiamato \textbf{Terzo principio della Termodinamica}:
+
+\begin{quote}
+Per ogni \textbf{processo isotermo reversibile} tra due stati di equilibrio interno $A$ e $B$, la variazione di entropia tende a zero quando la temperatura tende allo zero assoluto:
+
+\[
+\lim_{T \rightarrow 0} [S(B, T) - S(A, T)] = 0
+\]
+\end{quote}
+
+\subsection{Zero assoluto}
+
+Lo zero assoluto viene definito come il limite inferiore della scala Kelvin ($T = 0 \text{ K}$). Si può definire coerente anche con l’estrapolazione delle leggi dei gas (che portano lo zero come valore limite), ma in pratica è un valore \textbf{non raggiungibile}.
+
+Un modo equivalente di formulare il terzo principio è
+
+\begin{quote}
+\textbf{\emph{Non è possibile ridurre un sistema alla temperatura dello zero assoluto con un numero finito di operazioni}}.
+\end{quote}
+
+Per scambi reversibili, il collegamento con l’entropia passa dalla relazione $\Delta Q_{rev} = T \Delta S$. Se $T \Rightarrow 0$ e contemporaneamente $\Delta S \rightarrow 0$, allora anche il calore reversibile scambiabile $\Delta Q_{rev}$ tende a zero: \textbf{diventa sempre più difficile sottrarre ulteriore calore al sistema}, perché ogni operazione di raffreddamento “rende” sempre meno.
+
+\subsection{Calore specifico vicino allo zero}
+
+Sperimentalmente il \textbf{calore specifico} ($C_V$) va a \textbf{zero} quando $T \rightarrow 0$, in accordo con il terzo principio. Ad \textbf{alta temperatura} si può spesso approssimare $C_V$ come circa costante, mentre a \textbf{bassa temperatura} $C_V$ diminuisce fortemente.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/image 10.png}
+\end{figure}
+
+Quindi a temperature molto basse, il sistema “ha sempre meno modi” di assorbire energia termica, quindi serve pochissimo calore per scambiare la temperatura, e questo contribuisce al fatto che lo zero assoluto sia un limite \textbf{irraggiungibile} con procedure finite.
