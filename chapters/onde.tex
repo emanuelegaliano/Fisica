@@ -1,2 +1,633 @@
 \chapter{Elementi di Onde}
-[WIP]
+
+Le onde sono perturbazioni che si propagano nello spazio trasportando energia ma \textbf{senza trasporto di materia}. Esse possono manifestarsi in diverse forme come onde meccaniche o elettromagnetiche.
+
+\section{Tipi di onde}
+La distinzione delle onde può essere fatta in base alla direzione di oscillazione delle particelle del mezzo rispetto alla direzione di propagazione dell'onda stessa. In particolare, si distinguono due tipi principali di onde:
+\begin{itemize}
+    \item Onde trasversali,
+    \item Onde longitudinali.
+\end{itemize}
+
+\subsection{Onde trasversali}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/onde_s.png}
+    \caption{Rappresentazione di un'onda trasversale (onda sismica di tipo S).}
+    \label{fig:onda_trasversale}
+\end{figure}
+
+\begin{quote}
+    Le onde traversali sono quelle in cui la direzione di oscillazione delle particelle del mezzo è perpendicolare alla direzione di propagazione dell'onda.
+\end{quote}
+
+Alcuni esempi di onde trasversali includono le onde sulla superficie dell'acqua, le onde sismiche di tipo S e le onde elettromagnetiche.
+
+\subsection{Onde longitudinali}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/onde_p.png}
+    \caption{Rappresentazione di un'onda longitudinale (onda sismica di tipo P).}
+    \label{fig:onda_longitudinale}
+\end{figure}
+
+\begin{quote}
+    Le onde longitudinali sono quelle in cui la direzione di oscillazione delle particelle del mezzo è parallela alla direzione di propagazione dell'onda.
+\end{quote}
+
+Alcuni esempi di onde longitudinali includono le onde sonore e le onde sismiche di tipo P.
+
+\section{Onde sinusoidali}
+Le onde sinusoidali sono un tipo particolare di onde caratterizzate da una forma d'onda che segue una funzione sinusoidale. Esse sono fondamentali nello studio delle onde poiché molte onde reali possono essere approssimate come somme\footnote{Ad esempio, la trasformata di Fourier permette di rappresentare qualsiasi onda periodica come somma di onde sinusoidali.} di onde sinusoidali.
+
+\subsection{Equazione dell'onda sinusoidale}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/onda_sinusoidale_x.png}
+        \caption{Rappresentazione di un'onda sinusoidale nella retta $x$. Il parametro $\lambda$ rappresenta la lunghezza d'onda.}
+        \label{fig:onda_sinusoidale_x}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/onda_sinusoidale_t.png}
+        \caption{Rappresentazione di un'onda sinusoidale nel tempo $t$. Il parametro $T$ rappresenta il periodo temporale dell'onda.}
+        \label{fig:onda_sinusoidale_t}
+    \end{minipage}
+\end{figure}
+
+L'equazione delle onde sinusoidali può essere espressa come:
+\begin{equation}
+    \xi(x, t) = A \cos(kx - \omega t) = A \cos\left(\frac{2 \pi x}{\lambda} - \frac{2 \pi t}{T}\right)
+\end{equation}
+\addcontentsline{equ}{myequations}{Equazione dell'onda sinusoidale}
+dove $k = \frac{2 \pi}{\lambda}$ è il numero d'onda, $\omega = \frac{2 \pi}{T}$ è la pulsazione (o frequenza), $A$ è l'ampiezza dell'onda, $\lambda$ è la lunghezza d'onda e $T$ è il periodo.
+
+
+\subsection{Velocità di propagazione}
+Guardando le figure \ref{fig:onda_sinusoidale_x} e \ref{fig:onda_sinusoidale_t}, possiamo osservare come l'onda si propaga nello spazio e nel tempo. Da questi due parametri, $\lambda$ e $T$, possiamo definire la velocità di propagazione dell'onda come:
+\begin{equation}
+    c = \frac{\lambda}{T}
+\end{equation}
+\addcontentsline{equ}{myequations}{Velocità di propagazione dell'onda}
+dove $c$ rappresenta la velocità di propagazione dell'onda nel mezzo considerato. Grazie a questa relazione, possiamo comprendere come la velocità di un'onda dipenda dalla lunghezza d'onda e dal periodo.
+
+\section{Il suono}
+Il suono è un esempio comune di onda longitudinale che si propaga attraverso mezzi materiali come l'aria, l'acqua e i solidi. Esso si manifesta come variazioni (ovvero oscillazioni) di pressione che vengono percepite dall'orecchio umano.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/onda_sonora.png}
+    \caption{Rappresentazione di un'onda sonora che si propaga nell'aria. Le variazioni di pressione sono indicate dalle zone di compressione e rarefazione (rispettivamente zone più scure e più chiare).}
+    \label{fig:onda_sonora}
+\end{figure}
+
+\subsection{Equazione dell'onda sonora}
+L'equazione che descrive la propagazione delle onde sonore in un mezzo omogeneo è data da:
+\begin{equation}
+    c^2 \frac{\partial^2 \xi}{\partial x^2} - \frac{\partial^2 \xi}{\partial t^2} = 0
+\end{equation}
+\addcontentsline{equ}{myequations}{Equazione dell'onda sonora}
+dove $\xi(x, t)$ rappresenta la variazione di pressione in funzione della posizione $x$ e del tempo $t$, e
+\begin{equation}
+    c^2 = \frac{dP}{d\rho}
+\end{equation}
+è la velocità (al quadrato) di propagazione del suono nel mezzo considerato. In tale espressione compare la densità del mezzo
+\begin{equation}
+    \rho = \frac{dm}{dV},
+\end{equation}
+definita come il rapporto tra una variazione infinitesima di massa $dm$ e il volume $dV$ che la contiene.
+
+\paragraph{Densità del mezzo e comprimibilità.}
+Dal punto di vista fisico, la densità $\rho$ descrive come la massa del mezzo è distribuita nello spazio. Nei fenomeni sonori, le onde si propagano attraverso piccole variazioni locali di densità dovute a compressioni e rarefazioni del mezzo.
+
+La presenza della derivata $\frac{dP}{d\rho}$ indica che la velocità del suono dipende da come la pressione del mezzo varia al variare della sua densità. In particolare, maggiore è la resistenza del mezzo alla compressione, maggiore risulta la velocità di propagazione dell'onda sonora.
+
+\subsection{Elemento di fluido e variazioni di pressione}
+Per comprendere l'origine dell'equazione dell'onda sonora, consideriamo un piccolo elemento di fluido di sezione $A$ e spessore $dx$. Durante la propagazione dell'onda, tale elemento può subire piccole compressioni o espansioni lungo la direzione di propagazione, modificando localmente la pressione.
+
+Queste variazioni di pressione non sono uniformi nello spazio, ma dipendono dalla posizione, dando luogo a una pressione $P(x,t)$ variabile lungo l'asse di propagazione.
+
+\subsection{Forza agente sul fluido}
+La forza agente sull'elemento di fluido è dovuta alla differenza di pressione tra le sue due estremità. Poiché la pressione varia nello spazio, la forza risultante lungo la direzione $x$ risulta proporzionale al gradiente della pressione:
+\begin{equation}
+    F \propto - \frac{\partial P}{\partial x}.
+\end{equation}
+Il segno meno indica che la forza è diretta verso le regioni di pressione minore.
+
+\paragraph{Meccanismo di propagazione dell'onda sonora.}
+Le variazioni locali di pressione generano forze che mettono in moto il fluido, producendo successive compressioni e rarefazioni che si propagano nello spazio. Questo processo avviene senza trasporto netto di materia, ma con trasporto di energia.
+
+\section{Soluzione generale dell'equazione dell'onda}
+
+L'equazione dell'onda unidimensionale
+\begin{equation}
+    c^2 \frac{\partial^2 \xi}{\partial x^2} - \frac{\partial^2 \xi}{\partial t^2} = 0
+\end{equation}
+descrive la propagazione di una perturbazione lungo una direzione spaziale con velocità costante $c$.
+
+\subsection{Forma generale della soluzione}
+Una delle proprietà fondamentali dell'equazione dell'onda è che essa ammette come soluzione generale una funzione arbitraria della combinazione $x - ct$:
+\begin{equation}
+    c^2 \frac{\partial^2 \xi}{\partial x^2} - \frac{\partial^2 \xi}{\partial t^2} = 0 \qquad \Longrightarrow \qquad  \xi(x,t) = f(x - ct).
+\end{equation}
+\addcontentsline{equ}{myequations}{Soluzione generale dell'equazione dell'onda}
+
+Questa espressione rappresenta un'onda che si propaga lungo l'asse $x$ in direzione positiva con velocità $c$, mantenendo inalterata la propria forma nel tempo.
+
+In modo del tutto analogo, una funzione della forma $f(x + ct)$ descriverebbe un'onda che si propaga nella direzione opposta.
+
+\subsection{Interpretazione fisica della soluzione}
+
+La soluzione $\xi(x,t) = f(x - ct)$ ha una chiara interpretazione fisica: il profilo dell'onda al tempo iniziale $t = 0$, descritto dalla funzione $f(x)$, viene semplicemente traslato nello spazio al crescere del tempo, senza deformazioni.
+
+Qualunque sia la forma iniziale della perturbazione — sinusoidale, localizzata o irregolare, essa si propaga rigidamente con velocità $c$. Questo spiega perché l'equazione dell'onda descriva non solo onde periodiche, ma anche impulsi e perturbazioni di forma arbitraria.
+
+\subsection{Onde non sinusoidali}
+
+Le onde sinusoidali rappresentano un caso particolare di soluzione dell'equazione dell'onda. Tuttavia, la forma generale $f(x - ct)$ consente di descrivere anche onde non periodiche o impulsi localizzati.
+Profili iniziali diversi danno luogo a onde con caratteristiche differenti, che si propagano mantenendo la loro forma. Questo risultato è di grande importanza, poiché molte onde reali non sono perfettamente sinusoidali.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{images/esempi_onde_non_sinusoidali.png}
+    \caption{Esempi di profili d'onda descritti dalla soluzione generale $\xi(x,t)=f(x-ct)$. 
+    A sinistra è mostrato un impulso localizzato a singolo massimo; a destra un profilo più complesso. 
+    In entrambi i casi la forma dell'onda si propaga rigidamente lungo l'asse $x$ con velocità costante $c$, senza deformarsi.}
+    \label{fig:onde_non_sinusoidali}
+\end{figure}
+
+\subsection{Onde in natura: onde anomale e tsunami}
+La validità della soluzione generale dell'equazione dell'onda trova applicazione anche in fenomeni naturali di grande scala. Le onde anomale e gli tsunami possono essere descritti, in prima approssimazione, come perturbazioni che si propagano mantenendo una forma complessiva coerente.
+
+Nel caso degli tsunami, una perturbazione iniziale del fondale marino genera un'onda che si propaga su distanze enormi con velocità elevata, trasportando energia ma non materia. La descrizione matematica tramite la soluzione $\xi(x,t) = f(x - ct)$ permette di comprendere come un'unica perturbazione iniziale possa dar luogo a effetti devastanti lontano dalla regione di origine.
+
+Questi esempi mostrano come l'equazione dell'onda e la sua soluzione generale costituiscano uno strumento fondamentale per la comprensione di numerosi fenomeni fisici reali.
+
+\section{Intensità delle onde sonore}
+L'intensità di un'onda sonora è una misura dell'energia per unità di superficie e di tempo trasportata da un'onda. Essa è definita come:
+\begin{equation}
+I = \frac{P}{A} \propto c \omega^2 \xi_0^2
+\end{equation}
+\addcontentsline{equ}{myequations}{Intensità delle onde sonore}
+dove $P$ è la potenza dell'onda, $A$ è l'area attraverso cui l'onda si propaga, $c$ è la velocità di propagazione, $\omega$ è la frequenza angolare e $\xi_0$ è l'ampiezza dell'onda.
+
+Questa intensità, visti i parametri coinvolti, può essere analizzata per:
+\begin{description}
+    \item[Onde sonore.] - Nelle onde sonore i suoni forti trasportano più energia di suoni deboli, dovuto all'ampiezza maggiore delle onde sonore. Anche nei suoni più acuti (frequenza maggiore) l'intensità è più elevata, questo perché l'energia trasportata dipende dalla frequenza.
+    \item[Onde elettromagnetiche.] - Nelle onde elettromagnetiche, come la luce, l'intensità cresce al crescere dei campi elettrici e magnetici associati all'onda. Inoltre l'intensità cresce con la frequenza dell'onda, motivo per cui la luce ultravioletta è più energetica della luce visibile.
+\end{description}
+
+\section{Interferenza}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/interferenza_costruttiva.png}
+        \caption{Esempio di interferenza costruttiva tra due onde in fase.}
+        \label{fig:interferenza_costruttiva}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/interferenza_distruttiva.png}
+        \caption{Esempio di interferenza distruttiva tra due onde sfasate di mezzo periodo.}
+        \label{fig:interferenza_distruttiva}
+    \end{minipage}
+\end{figure}
+
+L'interferenza è un fenomeno che si verifica quando due o più onde si sovrappongono nello stesso punto dello spazio, dando origine a una nuova onda risultante. Questo fenomeno può essere di due tipi principali:
+\begin{itemize}
+    \item Interferenza costruttiva,
+    \item Interferenza distruttiva.
+\end{itemize}
+
+\subsection{Interferenza costruttiva}
+L'interferenza costruttiva, a sinistra in figura \ref{fig:interferenza_costruttiva}, si verifica quando due onde sono in fase, ovvero quando i loro picchi e le loro valli coincidono. In questo caso, le ampiezze delle onde si sommano, dando luogo a un'onda risultante con un'ampiezza maggiore.
+
+\subsection{Interferenza distruttiva}
+L'interferenza distruttiva, a destra in figura \ref{fig:interferenza_distruttiva}, si verifica quando due onde sono sfasate di mezzo periodo, ovvero quando i picchi di un'onda coincidono con le valli dell'altra. In questo caso, le ampiezze delle onde si sottraggono, dando luogo a un'onda risultante con un'ampiezza minore o addirittura nulla.
+
+\subsection{Onda stazionaria}
+Un'onda stazionaria si forma quando un'onda sinusoidale che viaggia in una direzione, caratterizzata da $\lambda$ e $T$, interferisce con un'onda di uguale ampiezza e frequenza che viaggia nella direzione opposta. La sovrapposizione di queste due onde dà origine a un'onda risultante che non si propaga nello spazio, ma oscilla in modo stazionario.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/onda_stazionaria.png}
+    \caption{Rappresentazione di un'onda stazionaria.}
+    \label{fig:onda_stazionaria}
+\end{figure}
+
+Per eesmpio, nella figura \ref{fig:onda_stazionaria} sono evidenziati i nodi (punti di ampiezza nulla) e si possono notare le ventri (punti di ampiezza massima) dell'onda stazionaria. Le due onde si possono rappresentare con le seguenti equazioni:
+\[
+\xi_1(x, t) = \xi_0 \cos \left( \frac{2 \pi}{\lambda} x - \frac{2 \pi}{T} t \right), \qquad \xi_2(x, t) = \xi_0 \cos \left( \frac{2 \pi}{\lambda} x + \frac{2 \pi}{T} t \right).
+\]
+La sovrapposizione delle due onde dà luogo all'onda stazionaria:
+\[
+\xi(x, t) = \xi_1(x, t) + \xi_2(x, t) = 2 \xi_0 \cos \left( \frac{2 \pi}{\lambda} x \right) \cos \left( \frac{2 \pi}{T} t \right).
+\]
+
+\paragraph{Esempi.}
+Esempi classici di onde stazionarie si verificano in una corda vibrante fissa alle estremità (figura \ref{fig:corda_vibrante}), dove le onde riflesse alle estremità della corda interferiscono con le onde incidenti, dando origine a un'onda stazionaria con nodi (in rosso) e ventri (in blu) lungo la corda. Un altro esempio di onda stazionaria si verifica nella membrana di un tamburo (figura \ref{fig:membrana_tamburo}), dove le onde sonore generate dalla percussione della membrana si riflettono ai bordi, creando onde stazionarie che determinano i modelli di vibrazione della membrana stessa.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/corda_vibrante.png}
+        \caption{Rappresentazione di un'onda stazionaria su una corda vibrante.}
+        \label{fig:corda_vibrante}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/membrana_tamburo.png}
+        \caption{Rappresentazione di un'onda stazionaria sulla membrana di un tamburo.}
+        \label{fig:membrana_tamburo}
+    \end{minipage}
+\end{figure}
+
+\section{Diffrazione}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/diffrazione.png}
+        \caption{Rappresentazione della diffrazione di un'onda attraverso una fenditura.}
+        \label{fig:diffrazione}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/diffrazione_acqua.png}
+        \caption{La presenza delle barriere frangiflutti induce una propagazione laterale delle onde oltre l'ostacolo.}
+        \label{fig:diffrazione_acqua}
+    \end{minipage}
+\end{figure}
+
+La diffrazione è un fenomeno che si verifica quando un'onda incontra un ostacolo o una fenditura il cui diametro è comparabile alla lunghezza d'onda dell'onda stessa. In queste condizioni, l'onda si piega attorno all'ostacolo o si propaga attraverso la fenditura, creando un modello di interferenza caratteristico. Questo fenomeno è particolarmente evidente nelle onde sonore e nelle onde luminose.
+
+La figura \ref{fig:diffrazione} mostra come un'onda che passa attraverso una fenditura si diffonde lateralmente, creando un pattern di onde circolari dietro la fenditura. Nella figura \ref{fig:diffrazione_acqua}, le barriere frangiflutti permettono alle onde di propagarsi oltre l'ostacolo, dimostrando il fenomeno della diffrazione in un contesto marino.
+
+\section{Approfondimento: Equazione delle onde acustiche}
+
+Consideriamo un elemento di volume di un gas, 
+$dV$,
+che quando non è perturbato dal passaggio dell'onda ha densità $\rho_0=dm/dV$.
+L'elemento di volume lo scriviamo come $dV=A_T dx$, dove stiamo ipotizzando che
+l'onda si propaghi lungo l'asse $x$, e $A_T$ rappresenta l'area della superficie trasversa,
+ovvero quella perpendicolare alla direzione di propagazione dell'onda.
+A causa del passaggio dell'onda, il volume considerato può aumentare
+o diminuire a seconda che ci sia una compressione o una dilatazione.
+In generale, possiamo scrivere che la lunghezza del volume passa da 
+$dx$ a $dx+d\xi$, dove $d\xi$ rappresenta la dilatazione/compressione 
+causata dall'onda, e può essere identificato con lo spostamento.
+Inoltre, a causa del passaggio dell'onda la densità del gas diventa $\rho$.
+L'equazione delle onde è un'equazione per $\xi$, ovvero per la perturbazione
+indotta dall'onda.
+
+
+All'equilibrio, la pressione del gas, $P$, è uniforme nel volume considerato.
+Per effetto del passaggio dell'onda invece, la pressione acquista una dipendenza
+da $x$, per cui la differenza di pressione tra il punto $x$ e quello $x + dx$
+allo stesso istante di tempo è
+\begin{equation}
+dP = \frac{\partial P}{\partial x}dx.
+\label{eq:la7_0851}
+\end{equation} 
+La quantità $\partial P/\partial x$ la chiamiamo gradiente di pressione.
+
+
+Essendo la pressione una forza per unità di area,
+la forza che agisce sul volume considerato si scrive come
+\begin{equation}
+dF = -  A_T dP,
+\label{eq:la7_0858}
+\end{equation}
+ovvero, usando la~\eqref{eq:la7_0851},
+\begin{equation}
+dF = -\frac{\partial P}{\partial x} dV.
+\label{eq:la7_0858_2}
+\end{equation}
+Il segno $-$ nel membro di destra delle~\eqref{eq:la7_0858} e~\eqref{eq:la7_0858_2}
+è dovuto al fatto che la forza netta che agisce sul volume
+di gas considerato ha verso opposto rispetto al gradiente di pressione.
+Ad esempio, se la pressione aumenta nel verso positivo dell'asse $x$,
+$\partial P/\partial x$ è positivo, in quanto $P(x+dx)>P(x)$ e
+$dP=P(x+dx)-P(x)>0$, mentre la forza ha verso opposto a quello dell'asse $x$\footnote{Qualitativamente, si può interpretare quel segno $-$ notando the
+gli strati di gas con pressione più alta spingono verso gli strati con pressione
+più bassa, quindi la forza netta è orientata verso gli strati con pressione più bassa,
+opposta al verso del gradiente di pressione.}.
+
+Dalla seconda legge della dinamica, la forza che agisce sulla
+massa $dm=\rho_0 dV$ di gas è
+\begin{equation}
+dF =  a dm=a \rho_0 dV,
+\label{eq:la7_0922}
+\end{equation}
+dove $a$ è l'accelerazione. Lo spostamento del volumetto considerato 
+per effetto del passaggio dell'onda è $d\xi$,
+per cui l'accelerazione in un punto fissato
+dello spazio è $a=\partial^2\xi/\partial t^2$, da cui deriva che
+\begin{equation}
+	dF =  \rho_0 dV\frac{\partial^2\xi}{\partial t^2}.
+	\label{eq:la7_0923}
+\end{equation}
+Dalle~\eqref{eq:la7_0858_2} e~\eqref{eq:la7_0923} abbiamo dunque
+\begin{equation}
+\rho_0 dV\frac{\partial^2\xi}{\partial t^2} = -\frac{\partial P}{\partial x} dV,
+	\label{eq:la7_0926}
+\end{equation}
+ovvero
+\begin{equation}
+\rho_0 \frac{\partial^2\xi}{\partial t^2} = -\frac{\partial P}{\partial x}.
+\label{eq:la7_0926_2}
+\end{equation}
+Essendo
+\begin{equation}
+\frac{\partial P}{\partial x} = \frac{\partial P}{\partial \rho}
+\frac{\partial \rho}{\partial x},
+\label{eq:otto_0945}
+\end{equation}
+possiamo riscrivere la~\eqref{eq:la7_0926_2} come
+\begin{equation}
+	\rho_0 \frac{\partial^2\xi}{\partial t^2} = -\frac{\partial P}{\partial \rho}
+	\frac{\partial \rho}{\partial x}.
+	\label{eq:la7_0926_2_2}
+\end{equation}
+La quantità $\partial P/\partial\rho$ rappresenta la velocità di propagazione dell'onda
+al quadrato, 
+\begin{equation}
+c_s^2 = \frac{\partial P}{\partial \rho}.
+\label{eq:la7_0948}
+\end{equation}
+Quindi, la~\eqref{eq:la7_0926_2_2} può essere scritta anche come
+\begin{equation}
+	\rho_0 \frac{\partial^2\xi}{\partial t^2} = -c_s^2
+	\frac{\partial \rho}{\partial x}.
+	\label{eq:la7_0926_2_4}
+\end{equation}
+
+
+Esprimiamo il gradiente di densità, $\partial\rho/\partial x$,
+ in funzione della derivata della
+perturbazione, $\xi$. A tal scopo, osserviamo che 
+l'onda si limita a contrarre/dilatare il volume lungo la sua direzione di propagazione,
+ma non cambia il numero di particelle di gas contenute nel volume. 
+Quindi, la massa totale del volumetto considerato non cambia per effetto del passaggio
+dell'onda. Possiamo dunque scrivere
+\begin{equation}
+\rho_0 dV = \rho A_T(dx+d\xi),
+\label{eq:otto_0939}
+\end{equation}
+ovvero,
+\begin{equation}
+	\rho_0 dx = \rho (dx+d\xi).
+	\label{eq:otto_0939_2}
+\end{equation}
+Poichè $d\xi= (\partial\xi/\partial x)dx$ a tempo fissato, 
+possiamo riscrivere la~\eqref{eq:otto_0939_2} come
+\begin{equation}
+	\rho_0 dx = \rho \left(1+\frac{\partial\xi}{\partial x}\right)dx,
+	\label{eq:otto_0939_3}
+\end{equation}
+per cui
+\begin{equation}
+	\rho_0 = \rho\left(1+\frac{\partial \xi}{ \partial x}\right),
+	\label{eq:otto_0939_4}
+\end{equation}
+o in forma equivalente
+\begin{equation}
+	\rho = \rho_0\left(1+\frac{\partial\xi}{\partial x}\right)^{-1}\approx
+	\rho_0\left(1-\frac{\partial\xi}{\partial x}\right);
+	\label{eq:otto_0939_8}
+\end{equation}
+nell'ultimo passaggio abbiamo supposto che la 
+variazione dello spostamento $\xi$ con $x$ sia piccola~\footnote{Abbiamo usato
+la relazione
+\begin{displaymath}
+\frac{1}{1+a}\approx 1-a,
+\end{displaymath}
+valida quando $a\rightarrow 0$.}. Allora, 
+\begin{equation}
+\frac{\partial\rho}{\partial x} = -\rho_0\frac{\partial^2\xi}{\partial x^2}.
+\label{eq:la7_0958}
+\end{equation}
+
+Dalle~\eqref{eq:la7_0958} e~\eqref{eq:la7_0926_2_4} segue che
+\begin{equation}
+	\rho_0 \frac{\partial^2\xi}{\partial t^2} = c_s^2\rho_0
+	\frac{\partial^2\xi}{\partial x^2},
+	\label{eq:la7_0926_2_16}
+\end{equation}
+e infine
+\begin{equation}
+\frac{\partial^2\xi}{\partial t^2} = c_s^2
+\frac{\partial^2\xi}{\partial x^2}.
+\label{eq:la7_0926_2_32}
+\end{equation}
+La~\eqref{eq:la7_0926_2_32} è l'equazione delle onde, che descrive
+la propagazione della perturbazione nel gas. 
+
+Un'onda monocromatica con lunghezza d'onda $\lambda$ e
+periodo $T$,
+\begin{equation}
+\xi_{\lambda,T}(x,t) = \xi_0\cos\left(\frac{2\pi}{\lambda}x - \frac{2\pi}{T}t\right),
+\label{eq:otto_1835}
+\end{equation}
+è soluzione dell'equazione~\eqref{eq:la7_0926_2_32} se $\lambda$ e $T$ soddisfano
+la relazione
+\begin{equation}
+\frac{\lambda}{T}=c_s.
+\label{eq:otto_1838}
+\end{equation}
+Infatti, è facile verificare che valgono le relazioni
+\begin{equation}
+\frac{\partial^2\xi}{\partial t^2} = -\frac{4\pi^2}{T^2}\xi(x,t),~~~
+\frac{\partial^2\xi}{\partial x^2} = -\frac{4\pi^2}{\lambda^2}\xi(x,t),
+\label{eq:otto_1841}
+\end{equation}
+per cui, la~\eqref{eq:la7_0926_2_32} è verificata se vale la~\eqref{eq:otto_1838}.
+
+Una generica soluzione della~\eqref{eq:la7_0926_2_32} si può scrivere
+nella forma
+\begin{equation}
+\xi(x,t) = \xi_+(x-c_s t) + \xi_-(x+c_s t).
+\label{eq:otto_1847}
+\end{equation}
+I due addendi a secondo membro della~\eqref{eq:otto_1847} corrispondono a due onde
+che si propagano lungo l'asse $x$, in direzione concorde e discorde all'asse rispettivamente. 
+Queste sono dette onde progressiva e regressiva rispettivamente.
+Limitandoci per semplicità al caso 
+di un'onda che si propaga nel verso dell'asse $x$, abbiamo
+\begin{equation}
+\frac{\partial^2\xi_+}{\partial t^2} = c_s^2
+\left.\frac{d^2\xi_+}{du^2}\right|_{u=x-c_s t},~~~
+\frac{\partial^2\xi_+}{\partial x^2} = \left.\frac{d^2\xi_+}{du^2}\right|_{u=x-c_s t},
+\label{eq:otto_1841_2}
+\end{equation}
+quindi la~\eqref{eq:la7_0926_2_32} è automaticamente soddisfatta.
+L'onda progressiva può essere rappresentata come un profilo che a $t=0$ ha la forma della
+funzione $\xi_+(x)$, e che per $t>0$ si sposta nel verso dell'asse $x$
+con velocità $c_s$ senza deformarsi. 
+Per visualizzare come questo sia corretto,
+supponiamo per esempio che la funzione $\xi_+(u)$ abbia un massimo
+per $u=\bar u$. A $t=0$, questo corrisponde ad un massimo del profilo per
+$x=x_1=\bar u$. Per $t>0$ il massimo si trova nel valore di $x=x_2$ tale che
+$x_2-c_s t=\bar u$. Per cui, le due coordinate a cui si trova il massimo
+ai due tempi
+soddisfano la relazione
+\begin{equation}
+x_1 = x_2-c_s t,
+\label{eq:otto_1906}
+\end{equation}
+che può anche essere scritta come
+\begin{equation}
+ x_2-x_1  = c_s t.
+\label{eq:otto_1906_2}
+\end{equation}
+La~\eqref{eq:otto_1906_2} corrisponde proprio allo legge oraria di un punto
+materiale che nell'intervallo di tempo $t$
+si muove di moto rettilineo uniforme con velocità $c_s$
+nel verso positivo dell'asse $x$, con spostamento dato da $x_2-x_1$. 
+Quindi, il massimo della funzione si sposta con velocità $c_s$ 
+nel verso dell'asse $x$~\footnote{Il ragionamento può essere ripetuto per un
+qualunque altro valore della funzione, non necessariamente per un suo massimo.}.
+Analogamente, l'onda regressiva 
+può essere rappresentata come un profilo che a $t=0$ ha la forma della
+funzione $\xi_-(x)$, e che per $t>0$ si sposta nel verso opposto a quello dell'asse $x$
+con velocità $c_s$.
+
+Nella~\eqref{eq:la7_0926_2_32}  compare la velocità dell'onda sonora, 
+la cui relazione con la pressione e la densità del gas   è data dalla~\eqref{eq:la7_0948}.
+Tipicamente, le compressioni/rarefazioni dovute al passaggio dell'onda sono molto
+rapide, per cui il gas non ha tempo di scambiare calore con l'esterno e tali
+perturbazioni possono essere considerate come adiabatiche. 
+Nel caso dei gas perfetti che subiscono trasformazioni adiabatiche vale la legge
+\begin{equation}
+PV^\gamma=\mathrm{costante},~~~\gamma=\frac{C_P}{C_V},
+\label{eq:otto_1923}
+\end{equation}
+ed essendo $\rho=m/V$ possiamo scrivere la precedente relazione nella forma
+\begin{equation}
+P = \kappa \rho^{\gamma},
+\label{eq:otto_1925}
+\end{equation}
+con $\kappa$ una costante di proporzionalità che non abbiamo bisogno di specificare.
+Ne consegue che possiamo scrivere
+\begin{equation}
+c_s^2 = \kappa\gamma\rho^{\gamma-1}.
+\label{eq:otto_1930}
+\end{equation}
+In particolare, se con $\rho_0$ denotiamo la densità di equilibrio del gas, 
+\begin{equation}
+c_s^2 = \kappa\gamma\rho_0^{\gamma-1}.
+\label{eq:otto_1930_2_alpha}
+\end{equation}
+Moltiplicando e dividendo il membro a destra della~\eqref{eq:otto_1930_2_alpha}
+per $\rho_0$, e usando $P_0=\kappa\rho_0^\gamma$, in conclusione si ha
+\begin{equation}
+	c_s^2 = \frac{\gamma P_0}{\rho_0}.
+	\label{eq:otto_1930_2}
+\end{equation}
+La~\eqref{eq:otto_1930_2} esprime la relazione tra la velocità del suono in un gas,
+la pressione e la densità del gas stesso. In particolare, notiamo che la velocità
+del suono cresce con la pressione, e diminuisce con la densità. Questo comportamento
+è facile da interpretare dopo aver espresso $c_s$ in funzione della temperatura
+del gas. 
+A tal scopo, partiamo dall'equazione di stato del gas perfetto, che conviene
+scrivere nella forma
+\begin{equation}
+P_0 = \frac{nRT}{V_0},\label{eq:otto_1946}
+\end{equation}
+dove con $V_0$ denotiamo il volume di equilibrio del gas.
+Moltiplicando e dividendo per la massa, $m$, del gas contenuto nel volume $V_0$,
+otteniamo
+\begin{equation}
+P_0 = \frac{\rho_0 n RT}{m},~~~\rho_0=\frac{m}{V}.\label{eq:otto_1946_2}
+\end{equation}
+La quantità $\mathcal{M}\equiv m/n$ rappresenta la massa molare del gas,
+ovvero la massa di una mole di gas. Ad esempio, per la CO$_2$ si ha
+$\mathcal{M}=44$ g/mol, mentre per O$_2$ la massa molare vale
+$\mathcal{M}=32$ g/mol. In termini della massa molare, otteniamo dalla~\eqref{eq:otto_1946_2}
+\begin{equation}
+P_0 = \frac{\rho_0 RT}{\mathcal{M}}.\label{eq:otto_1946_3}
+\end{equation}
+Pertanto, dalla~\eqref{eq:otto_1930_2} otteniamo
+\begin{equation}
+c_s^2 = \gamma \frac{RT}{\mathcal{M}}.
+\label{eq:otto_1956}
+\end{equation}
+La~\eqref{eq:otto_1956} corrisponde alla relazione cercata tra la velocità delle onde
+sonore e la temperatura del gas perfetto in cui le onde si propagano.
+
+Possiamo interpretare facilmente la dipendenza della velocità del suono
+dalla temperatura data dalla~\eqref{eq:otto_1956}. Infatti, al crescere della
+temperatura, cresce l'agitazione termica del gas, per cui  è più facile trasmettere
+la perturbazione ondosa da un punto ad un altro del gas stesso.
+Quindi, $c_s$ cresce al crescere di $T$. 
+Questa osservazione permette di comprendere la dipendenza di $c_s$ da $P_0$ e
+$\rho_0$ nella~\eqref{eq:otto_1930_2}. Infatti, al crescere della temperatura mantenendo
+la densità costante, aumenta la pressione del gas (il gas
+si riscalda a volume costante per cui la pressione cresce in accordo alla legge
+$P/T=$ costante). Invece,
+se la temperatura aumenta mantenendo costante la pressione, la densità del gas
+diminuisce (il gas si espando mantenendo costante il rapporto $V/T$). 
+
+
+Per concludere, usiamo la~\eqref{eq:otto_1956} per stimare la velocità
+del suono
+per alcuni gas, assumendo che si comportino come gas perfetti. 
+Per esempio, nel caso dell'azoto molecolare, N$_2$, la cui massa molare
+è $\mathcal{M}=28$ g/mol$=0.028$ kg/mol, alla temperatura $T=298$K, 
+troviamo $c_s\approx 352$ m/s;
+per l'ossigeno molecolare, O$_2$, la cui massa molare
+è $\mathcal{M}=32$ g/mol$=0.032$ kg/mol, alla stessa temperatura, 
+troviamo $c_s\approx 329$ m/s.
+
+Come ultimo commento, osserviamo che la~\eqref{eq:la7_0926_2_32} 
+è scritta per la perturbazione $\xi$ del volumetto di gas considerato.
+Si può dimostrare facilmente, 
+partendo dalle relazioni già scritte per la fluttuazione di densità
+e la sua derivata, si vedano le equazioni~\eqref{eq:otto_0939_8}
+e~\eqref{eq:la7_0958}, che un'equazione formalmente simile vale anche per la
+densità del gas, ovvero
+\begin{equation}
+\frac{\partial^2\rho}{\partial t^2} = c_s^2
+	\frac{\partial^2\rho}{\partial x^2}.
+	\label{eq:la7_0926_2_32_densi}
+\end{equation}
+Analogamente, linearizzando la relazione $P=\kappa \rho^\gamma$,
+valida per compressioni/espansioni adiabatiche causate dall'onda, 
+e usando la~\eqref{eq:la7_0926_2_32_densi}, si deduce un'equazione d'onda per
+la pressione, ovvero
+\begin{equation}
+	\frac{\partial^2 P}{\partial t^2} = c_s^2
+	\frac{\partial^2 P}{\partial x^2}.
+	\label{eq:la7_0926_2_32_pressure}
+\end{equation}
+Infine, linearizzando la relazione $T=\alpha P^{\gamma-1/\gamma}$ intorno ai valori
+di equilibrio, dalla~\eqref{eq:la7_0926_2_32_pressure} si ricava 
+un'equazione d'onda per le fluttuazioni di temperatura, che si scrive come
+\begin{equation}
+\frac{\partial^2 T}{\partial t^2} = c_s^2
+	\frac{\partial^2 T}{\partial x^2}.
+	\label{eq:la7_0926_2_32_tempe}
+\end{equation}
+Il significato fisico delle~\eqref{eq:la7_0926_2_32_densi},
+\eqref{eq:la7_0926_2_32_pressure} e~\eqref{eq:la7_0926_2_32_tempe},
+è che alle fluttuazioni
+di volume si accompagnano fluttuazioni di densità, di pressione e di
+temperatura, che si propagano tutte come onde
+con velocità $c_s$. 
+
+\section*{Riferimenti}
+I riferimenti relativi a questo capitolo includono:
+\begin{itemize}
+    \item Materiale preso a lezione.
+    \item \url{https://www.sutori.com/en/story/interferenza-e-diffrazione--N8MS6JZrYDdsPyNB8wsBwbmT} per le figure \ref{fig:interferenza_costruttiva} e \ref{fig:interferenza_distruttiva}.
+    \item \url{https://svantek.com/pt/academia/onda-sonora/} per la figura \ref{fig:onda_sonora}.
+    \item Approfondimento sull'equazione delle onde acustiche dal materiale del Prof Marco Ruggieri.
+\end{itemize}
