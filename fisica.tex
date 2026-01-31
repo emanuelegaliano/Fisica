@@ -36,6 +36,14 @@
 \usepackage{tikz}
 \usetikzlibrary{calc,positioning}
 
+% =====================================================
+% EQUATION NUMBERING
+% =====================================================
+\usepackage{tocloft}
+
+\newcommand{\listequationsname}{Indice delle equazioni}
+\newlistof{myequations}{equ}{\listequationsname}
+
 % Helper: pattern leggero in copertina
 \newcommand{\DataPattern}{
   \begin{tikzpicture}[remember picture,overlay]
@@ -207,6 +215,10 @@ Versione: \today
 % BACK MATTER
 % =====================================================
 \backmatter
+
+\appendix
+\cleardoublepage
+\listofmyequations
 
 \printbibliography
 
