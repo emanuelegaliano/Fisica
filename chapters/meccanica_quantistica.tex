@@ -115,9 +115,12 @@ dove $h$ è la costante di Planck. Questa ipotesi introduce per la prima volta i
 \subsection{Energia media dei modi del campo elettromagnetico}
 
 A partire dall’ipotesi di quantizzazione dell’energia, il valore medio dell’energia associata a un singolo modo del campo elettromagnetico in equilibrio termico alla temperatura $T$ non è più dato dal principio di equipartizione\footnote{Il principio di equipartizione dell’energia, valido nella fisica classica, assegna a ogni grado di libertà un’energia media pari a $k_B T/2$. Tuttavia, questa ipotesi non tiene conto della quantizzazione dell’energia introdotta da Planck.}. Il risultato ottenuto da Planck è
-\[
+\begin{equation}
+\boxed{
 \langle E\rangle = \frac{h\nu}{e^{h\nu/k_B T}-1}.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Energia media dei modi del campo elettromagnetico secondo Planck}
 
 Questa espressione mostra che l’energia media di un modo dipende esplicitamente dalla frequenza: i modi ad alta frequenza richiedono una quantità di energia sempre maggiore per essere eccitati e risultano quindi progressivamente meno popolati. È proprio questo meccanismo che elimina la divergenza alle alte frequenze prevista dalla fisica classica.
 
@@ -127,20 +130,20 @@ Nel limite delle basse frequenze, ovvero per $h\nu \ll k_B T$, l’energia media
 
 La densità spettrale di energia emessa da un corpo nero può essere scritta in forma generale come
 \begin{equation}
-\[
+\boxed{
 \varepsilon(\nu)\,d\nu = \frac{8\pi \nu^2}{c^3}\,\langle E\rangle\,d\nu,
-\]
+}
 \end{equation}
 \addcontentsline{equ}{myequations}{Densità spettrale di energia emessa da un corpo nero}
 dove il fattore $\frac{8\pi \nu^2}{c^3}$ rappresenta il numero di modi del campo elettromagnetico nell’intervallo di frequenze $[\nu,\nu+d\nu]$.
 
 Sostituendo l’espressione quantistica dell’energia media, si ottiene la legge di Planck per lo spettro di emissione del corpo nero:
 \begin{equation}
-\[
+\boxed{
 \varepsilon(\nu)\, d\nu
 = \frac{8\pi \nu^2}{c^3}\,
 \frac{h\nu}{e^{h\nu/k_B T}-1}\, d\nu.
-\]
+}
 \end{equation}
 \addcontentsline{equ}{myequations}{Legge di Planck per lo spettro di corpo nero}
 
@@ -149,9 +152,13 @@ Questa legge riproduce correttamente l’andamento sperimentale dello spettro di
 \subsection{Limite classico dello spettro di Planck}
 
 Nel limite formale $h\nu \ll k_B T$, l’espressione dell’energia media può essere approssimata al primo ordine, ottenendo
-\[
+\begin{equation}
+\boxed{
 \langle E\rangle \simeq k_B T.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Limite classico dell’energia media dei modi del campo elettromagnetico}
+
 In questo regime, la legge di Planck si approssima alla legge di Rayleigh--Jeans, mostrando come la descrizione classica venga recuperata come limite della teoria quantistica.
 
 Questo risultato evidenzia un principio fondamentale della fisica moderna: una nuova teoria non sostituisce completamente quella precedente, ma ne generalizza i risultati, rendendoli validi in un dominio più ampio.
@@ -175,9 +182,13 @@ Nel caso ideale di un corpo nero, l’irraggiamento è completamente determinato
 \subsection{Potere emissivo del corpo nero}
 
 Si definisce \emph{potere emissivo spettrale} del corpo nero la quantità di energia elettromagnetica emessa per unità di tempo, per unità di area e per unità di lunghezza d’onda:
-\[
+\begin{equation}
+\boxed{
 \varepsilon(\lambda) = \frac{dE}{dt\, dA\, d\lambda}.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Potere emissivo spettrale del corpo nero}
+
 Questa funzione descrive come l’energia irradiata sia distribuita in funzione della lunghezza d’onda.
 
 Il potere emissivo spettrale è dato dalla legge di Planck, che mostra come l’emissione dipenda fortemente dalla temperatura: all’aumentare di $T$, l’intensità dell’emissione cresce e il massimo dello spettro si sposta verso lunghezze d’onda più piccole. La distribuzione spettrale è universale e non dipende dalla natura del materiale, ma solo dalla temperatura del corpo nero.
@@ -185,27 +196,36 @@ Il potere emissivo spettrale è dato dalla legge di Planck, che mostra come l’
 \vspace{0.5em}
 \noindent
 Il \emph{potere emissivo totale} si ottiene integrando il potere emissivo spettrale su tutte le lunghezze d’onda:
-\[
+\begin{equation}
+\boxed{
 \varepsilon = \int_0^{\infty} \varepsilon(\lambda)\, d\lambda.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Potere emissivo totale del corpo nero}
 
 \subsection{Legge di Wien}
 
 Una delle conseguenze della legge di Planck riguarda la posizione del massimo dello spettro di emissione. La \emph{legge di spostamento di Wien} afferma che la lunghezza d’onda $\lambda_{\max}$ alla quale l’emissione è massima è inversamente proporzionale alla temperatura assoluta del corpo:
-\[
+\begin{equation}
+\boxed{
 \lambda_{\max} = \frac{\alpha}{T},
 \qquad
 \alpha \simeq 2.9 \times 10^{-3}\,\text{m\,K}.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Legge di spostamento di Wien}
 
 Questa legge mostra che, aumentando la temperatura, il massimo dello spettro si sposta verso lunghezze d’onda sempre più piccole. Per questo motivo, corpi relativamente freddi emettono prevalentemente nell’infrarosso, mentre corpi molto caldi possono emettere in modo significativo nella regione visibile o ultravioletta.
 
 \subsection{Legge di Stefan--Boltzmann}
 
 Integrando la legge di Planck su tutte le lunghezze d’onda, si ottiene una relazione semplice per il potere emissivo totale di un corpo nero. La \emph{legge di Stefan--Boltzmann} afferma che l’energia emessa per unità di tempo e di area è proporzionale alla quarta potenza della temperatura assoluta:
-\[
+\begin{equation}
+\boxed{
 \varepsilon = \sigma T^4,
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Legge di Stefan--Boltzmann per il potere emissivo totale del corpo nero}
 dove $\sigma$ è la costante di Stefan--Boltzmann,
 \[
 \sigma = 5.67 \times 10^{-8}\,\text{W m}^{-2}\text{K}^{-4}.
@@ -276,9 +296,13 @@ In particolare, il modello si fonda su due affermazioni chiave:
 \subsection{Quantizzazione dei livelli energetici}
 
 Nel modello di Bohr, gli stati stazionari sono caratterizzati da energie discrete. Per l’atomo di idrogeno si ottiene una sequenza di livelli energetici indicizzati da un numero quantico principale $n=1,2,3,\dots$, con energia
-\[
+\begin{equation}
+\boxed{
 E_n = -\frac{E_H}{2}\,\frac{1}{n^2},
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Livelli energetici dell’atomo di idrogeno secondo il modello di Bohr}
+
 dove $E_H$ è una costante caratteristica dell’idrogeno (nelle slide indicata come $E_H \simeq 27.2\ \text{eV}$).
 
 Le transizioni tra livelli energetici spiegano naturalmente la presenza di righe discrete negli spettri: quando l’elettrone passa da uno stato iniziale $i$ a uno stato finale $j$, l’energia scambiata con la radiazione elettromagnetica è
@@ -306,9 +330,13 @@ Una delle teorie che ha portato alla nascita della meccanica quantistica è la t
 
 \subsection{Ipotesi di de Broglie}
 Louis de Broglie propose che ogni particella materiale, come un elettrone, possiede una natura ondulatoria associata. Secondo de Broglie, la lunghezza d'onda $\lambda$ associata a una particella di massa $m$ e velocità $v$ è data dalla relazione:
-\[
+\begin{equation}
+\boxed{
 \lambda = \frac{h}{mv},
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Relazione di de Broglie per la lunghezza d'onda associata a una particella}
+
 dove $h$ è la costante di Planck. Questa ipotesi suggerisce che le particelle materiali possano comportarsi come onde, con una lunghezza d'onda inversamente proporzionale alla loro quantità di moto.
 
 \subsection{Interpretazione ondulatoria e funzione d’onda}
@@ -334,9 +362,13 @@ che coincide con la condizione di quantizzazione del momento angolare proposta d
 Nel quadro moderno della meccanica quantistica, tuttavia, l’onda di de Broglie non viene interpretata come un’onda materiale, bensì come un’onda di probabilità. Le proprietà ondulatorie delle particelle si manifestano nei risultati delle misure, attraverso fenomeni come interferenza e diffrazione.
 
 Questa interpretazione conduce all’introduzione della funzione d’onda $\psi(x,t)$, che sostituisce il concetto classico di traiettoria. Il significato fisico della funzione d’onda è fornito dalla relazione
-\[
+\begin{equation}
+\boxed{
 P(x,t) = |\psi(x,t)|^2,
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Interpretazione probabilistica della funzione d’onda}
+
 che rappresenta la densità di probabilità di trovare la particella nella posizione $x$ al tempo $t$.
 
 La descrizione della dinamica quantistica di un sistema è quindi ricondotta allo studio dell’evoluzione temporale della funzione d’onda, che sarà governata dall’equazione di Schrödinger.
@@ -384,9 +416,12 @@ Per rendere esplicito questo punto, introduciamo due ampiezze complesse $\psi_1(
 P_{12}(x)=|\psi_{12}(x)|^2.
 \]
 Sviluppando si ottiene
-\[
+\begin{equation}
+\boxed{
 P_{12}(x)=|\psi_1(x)|^2+|\psi_2(x)|^2+2\,\Re\!\big(\psi_1(x)\psi_2^*(x)\big),
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Distribuzione di probabilità con entrambe le fenditure aperte}
 dove l’ultimo termine è il \emph{termine di interferenza}, responsabile dei massimi e minimi osservati sullo schermo.
 
 \paragraph{Dualità onda-particella.}
@@ -428,17 +463,24 @@ L’equazione di Schrödinger descrive quindi l’evoluzione temporale dello sta
 
 \subsection{Equazione di Schrödinger stazionaria}
 Nel caso di potenziali indipendenti dal tempo, il problema può essere semplificato cercando soluzioni in cui la dipendenza temporale e spaziale si separano. In questo contesto si introduce l’equazione di Schrödinger stazionaria, che nel lavoro originale di Schrödinger assume la forma:
-\[
+\begin{equation}
+\boxed{
 \nabla^2 \psi + \frac{8\pi^2 m}{h^2}(E - V)\psi = 0.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Equazione di Schrödinger stazionaria}
+
 Questa equazione consente di studiare i cosiddetti \emph{stati stazionari}, per i quali le grandezze osservabili non dipendono esplicitamente dal tempo. È in questa formulazione che emerge in modo naturale la quantizzazione dell’energia.
 
 \subsection{Autovalori energetici}
 La risoluzione dell’equazione di Schrödinger stazionaria porta a un problema agli autovalori: solo per determinati valori dell’energia $E$ esistono soluzioni fisicamente accettabili della funzione d’onda.  
 Nel caso dell’atomo di idrogeno, assumendo il potenziale coulombiano
-\[
+\begin{equation}
+\boxed{
 V(r) = -\frac{e^2}{r},
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Potenziale coulombiano per l’atomo di idrogeno}
 si ottiene uno spettro discreto di autovalori energetici:
 \[
 E_n = -\frac{2\pi^2 m e^4}{h^2 n^2}, \qquad n=1,2,3,\dots
@@ -451,11 +493,14 @@ In questo modo, Schrödinger riformula il problema dello spettro atomico come un
 Consideriamo il caso di una \emph{particella libera}, ovvero un sistema quantistico soggetto a potenziale nullo, $V(x)=0$. In questo caso l’equazione di Schrödinger dipendente dal tempo si semplifica e ammette soluzioni di tipo ondulatorio.
 
 Le soluzioni elementari sono onde piane, caratterizzate da una ben definita lunghezza d’onda $\lambda$ e frequenza $f$, legate ai parametri ondulatori
-\[
+\begin{equation}
+\boxed{
 \lambda = \frac{2\pi}{k}, 
 \qquad 
 f = \frac{\omega}{2\pi},
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Parametri ondulatori della particella libera}
 e associate a una quantità di moto e a un’energia ben definite. Tuttavia, una singola onda piana si estende su tutto lo spazio e \emph{non descrive una particella localizzata}.
 
 \begin{figure}[htbp]
@@ -467,9 +512,12 @@ e associate a una quantità di moto e a un’energia ben definite. Tuttavia, una
 \end{figure}
 
 Per rappresentare una particella libera con una posizione approssimativamente definita, si introduce una \emph{sovrapposizione di onde piane} con diversi numeri d’onda $k_i$ e frequenze $\omega_i$. La funzione d’onda può quindi essere scritta come
-\[
+\begin{equation}
+\boxed{
 \psi(x,t) = \sum_i A_i \cos\!\left(k_i x + \omega_i t\right),
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Sovrapposizione di onde piane per rappresentare una particella libera}
 dove i coefficienti $A_i$ determinano il contributo delle singole componenti.
 
 
@@ -512,9 +560,12 @@ Un sistema quantistico \textbf{non possiede} posizione e impulso
 ($p = mv$) definiti con infinita precisione.
 Le incertezze associate alla misura della posizione e dell’impulso
 soddisfano la relazione
-\[
+\begin{equation}
+\boxed{
 \Delta x \, \Delta p \ge \hbar ,
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Relazione di indeterminazione di Heisenberg per posizione e impulso}
 dove $\hbar = h/2\pi$ è la costante di Planck ridotta.
 \end{quote}
 
@@ -585,9 +636,12 @@ Gli stati quantistici non sono grandezze osservabili direttamente, ma permettono
 
 Così come le onde classiche possono sovrapporsi e interferire, anche gli stati quantistici obbediscono al principio di sovrapposizione.  
 Se $\lvert \vec{p}_1 \rangle$, $\lvert \vec{p}_2 \rangle$, $\lvert \vec{p}_3 \rangle$ rappresentano stati con impulso ben definito, uno stato quantistico generale può essere scritto come combinazione lineare:
-\[
+\begin{equation}
+\boxed{
 \lvert \psi \rangle = c_1 \lvert \vec{p}_1 \rangle + c_2 \lvert \vec{p}_2 \rangle + c_3 \lvert \vec{p}_3 \rangle.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Combinazione lineare di stati quantistici}
 
 Lo stato $\lvert \psi \rangle$ non possiede un valore definito dell’impulso, pur essendo costruito a partire da stati che lo hanno.  
 La sovrapposizione è una proprietà intrinseca degli stati quantistici e non va interpretata come un’ignoranza sulle proprietà del sistema.
@@ -596,14 +650,20 @@ La sovrapposizione è una proprietà intrinseca degli stati quantistici e non va
 
 I coefficienti complessi $c_i$ determinano le probabilità dei possibili risultati di una misura.  
 La probabilità di misurare l’impulso $\vec{p}_i$ nello stato $\lvert \psi \rangle$ è data da
-\[
+\begin{equation}
+\boxed{
 P(\vec{p}_i) = \lvert \langle \vec{p}_i \vert \psi \rangle \rvert^2 = \lvert c_i \rvert^2.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Probabilità di misurare un certo impulso in uno stato quantistico}
 
 Poiché la probabilità totale deve essere unitaria, i coefficienti devono soddisfare la condizione di normalizzazione:
-\[
+\begin{equation}
+\boxed{
 \lvert c_1 \rvert^2 + \lvert c_2 \rvert^2 + \lvert c_3 \rvert^2 = 1.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Condizione di normalizzazione degli stati quantistici}
 
 La normalizzazione garantisce la coerenza probabilistica della descrizione quantistica.
 
@@ -611,10 +671,13 @@ La normalizzazione garantisce la coerenza probabilistica della descrizione quant
 
 Un caso particolarmente importante è quello di un sistema a due stati, detto \emph{qubit}.  
 Uno stato di qubit può essere scritto come
-\[
+\begin{equation}
+\boxed{
 \lvert \psi \rangle = \cos\!\left(\frac{\theta}{2}\right)\lvert 0 \rangle
 + e^{i\phi}\sin\!\left(\frac{\theta}{2}\right)\lvert 1 \rangle.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Stato di un qubit in termini degli stati base}
 
 Le probabilità di misurare il sistema negli stati $\lvert 0 \rangle$ e $\lvert 1 \rangle$ sono:
 \[
@@ -647,9 +710,12 @@ Gli stati quantistici presentano caratteristiche concettualmente nuove rispetto 
 
 Gli stati quantistici non sono né onde né particelle nel senso classico, ma \emph{quanton}: entità descritte da funzioni d’onda che evolvono secondo le leggi della Meccanica Quantistica.  
 La funzione d’onda non rappresenta una traiettoria, ma una distribuzione di probabilità:
-\[
+\begin{equation}
+\boxed{
 P(x,t) = \lvert \psi(x,t) \rvert^2.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Interpretazione probabilistica della funzione d’onda}
 
 \begin{figure}[htbp]
     \centering
